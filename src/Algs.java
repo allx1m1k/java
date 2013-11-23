@@ -12,7 +12,7 @@
  * <li> summVector(double [][] matrix) возвращает массив, каждый элемент которого, сумма строки двумерного массива-аргумента.
  * </ol>
  */
-public class Hello {
+public class Algs {
 /**
  * Точка входа
  * @param args массив строковых аргументов
