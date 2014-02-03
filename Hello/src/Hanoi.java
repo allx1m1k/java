@@ -1,5 +1,5 @@
 /**
- * @author DPeltik
+ * @author dima 20140202
  *
  * To change this generated comment edit the template variable "typecomment":
  * Window>Preferences>Java>Templates.
