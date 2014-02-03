@@ -5,7 +5,9 @@ import org.eclipse.swt.widgets.Shell;
 public class SWTPrimer {
 
 	/**
+	 * @author dima 20140202
 	 * @param args
+	 *
 	 */
 	
 	public static void main (String [] args) {
