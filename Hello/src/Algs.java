@@ -40,9 +40,7 @@ public class Algs {
 		//catch (IllegalArgumentException e) {
 		//	System.out.println (e.getMessage());
 		//}
-	
-		System.out.println ("Факториал методом рекурсии равен: " + factorial(5)); //рекурсивный метод вычисления факториала
-		
+			
 		System.out.println ("Наибольший общий делитель для oper1 " + operand1 + " и oper2 " + operand2 + " равен " + gcd(operand1,operand2));
 		
 
@@ -104,41 +102,9 @@ public class Algs {
 			
 		return m;
 		
-			
-		
 		
 	}
 
-	/**Рекурсивный метод вычисления фкториала (метод вызывает сам себя)
-	 * 
-	 * @param f - целое положительное число
-	 * @return
-	 */
-	public static int factorial(int f){
-		
-		if(f==0) return 1; 
-			if (f>0) return f*factorial(f-1);
-			else {System.out.println("Отрицательный аргумент"); return-1;}
-	}
-	public static int factorialEx(int f) throws IllegalArgumentException {
-		
-		if(f==0) return 1; 
-			if (f>0) return f*factorial(f-1);
-			else throw new IllegalArgumentException("Negative argument in factorial function");
-	}
-	/** Итерационный метод вычисления факториала
-	 * 
-	 */
-	public static int factorial1(int f){
-		int result=1;
-		if(f==0) return 1; 
-			if (f>0) {
-				for (int i=1; i<=f; i++) result = result*i;
-				//return result;
-			} else{System.out.println("Отрицательный аргумент"); return-1;}
-			return result;
-			
-	}
 	/**Рекурсивный метод вычисления чисел Фибоначчи
 	 * 
 	 */
