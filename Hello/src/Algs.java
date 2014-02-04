@@ -37,13 +37,10 @@ public class Algs {
 		//}
 		//catch (IllegalArgumentException e) {
 		//	System.out.println (e.getMessage());
-		//}
-			
+		//}	
 
-		
 
-//		System.out.println ("Факториал итерационным методом равен: " + factorial1(arg1)); //итерационный метод вычисления факториала
-		//System.out.println (factorial1(5));
+
 		
 //		System.out.println("Фибоначчи рекурсия: " + fibonacci(arg1)); //рекурсивный метод чисел Фибоначчи
 //		System.out.println("Фибоначчи итерация: " + fibonacci1(arg1)); //итерационный метод чисел Фибоначчи
