@@ -18,8 +18,6 @@ public class Algs {
  * @param args массив строковых аргументов
  */
 	public static void main(String[] args) {
-		int operand1 = 40;
-		int operand2 = 18;
 //	int arg1=Integer.parseInt(args[0]);  //разбор агрументов метода main() 
 //	int arg2=Integer.parseInt(args[1]);  //то же Необходимо задать все 3-и аргумента
 //	int arg3=Integer.parseInt(args[2]);  //то же
@@ -41,7 +39,7 @@ public class Algs {
 		//	System.out.println (e.getMessage());
 		//}
 			
-		System.out.println ("Наибольший общий делитель для oper1 " + operand1 + " и oper2 " + operand2 + " равен " + gcd(operand1,operand2));
+
 		
 
 //		System.out.println ("Факториал итерационным методом равен: " + factorial1(arg1)); //итерационный метод вычисления факториала
@@ -64,15 +62,6 @@ public class Algs {
 		//System.out.println(Math.round(Math.E)); //округление до целого
 		//System.out.println(Math.min(Math.E, Math.PI)); //вывод в консоль наименьшей из
 		//статических переменных
-		
-	}
-	public static int gcd( int m, int n){
-		while(n!=0) 
-			// n = m% (m=n);		
-			n = m% (m=n);
-			
-		return m;
-		
 		
 	}
 
