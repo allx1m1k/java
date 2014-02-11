@@ -15,7 +15,7 @@ public class Cycle {
 		*/
 	}
 /**
- * 
+ * Send evaluated randomized variable to console until value of it more than 5
  * @param no arguments;
  * @return the latest value of temp varible
  */
