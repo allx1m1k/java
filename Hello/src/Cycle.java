@@ -1,4 +1,5 @@
-/*
+/**
+ * @author dima
  * Learning while()
  * Lesnevsky p.165
  */
@@ -15,7 +16,8 @@ public class Cycle {
 	}
 /**
  * 
- * @param i incoming argument 
+ * @param no arguments;
+ * @return the latest value of temp varible
  */
 	public static double conditionalprinting () {
 		double temp = 10.0; //initializing temp variable
@@ -23,7 +25,7 @@ public class Cycle {
 		
 		while (temp > 5) {
 			temp = Math.random(); //assignment to variable any random value
-			temp = temp * 10; //change value fro temp
+			temp = temp * 10; //change value temp
 			System.out.println("The randomized value multiplied on 10 = " +  temp);
 								
 		}
