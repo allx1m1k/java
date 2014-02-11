@@ -1,14 +1,20 @@
 /**
  * @author dima
+ * <h1>Cycles</h1>
+ * 
  * Learning while()
- * Lesnevsky p.165
+ * Learning fro ()
+ * 
+ * Lesnevsky p.165-166
  */
 public class Cycle {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 				
-		System.out.println("The latest value of temp is " +  conditionalprinting());
+		System.out.println("The latest value of temp is " +  conditionalPrinting());
+		System.out.println();
+		parametricPrinting(5);
 		/*
 		System.out.println("The randomized value = " +  anyValue);
 		System.out.println("The randomized value multiplied on 10 = " +  10 * Math.random());
@@ -17,21 +23,30 @@ public class Cycle {
 /**
  * Send evaluated randomized variable to console until value of it more than 5
  * @param no arguments;
- * @return the latest value of temp varible
+ * @return the latest value of temp varible;
  */
-	public static double conditionalprinting () {
+	public static double conditionalPrinting () {
 		double temp = 10.0; //initializing temp variable
 		System.out.println("Initial value of temp is = " +  temp);
 		
 		while (temp > 5) {
 			temp = Math.random(); //assignment to variable any random value
 			temp = temp * 10; //change value temp
-			System.out.println("The randomized value multiplied on 10 = " +  temp);
-								
-		}
-		
-		
+			System.out.println("The randomized value multiplied on 10 = " +  temp);				
+		}	
 		return temp;
+	}
+	
+	/**
+	 * 
+	 * @param ;
+	 * @return
+	 */
+	public static int parametricPrinting (int i) {
+		for (int index = 0; index < i; index++) {
+			System.out.println("Index is " +  index);		
+		}
+		return 0;
 		
 	}
 	
