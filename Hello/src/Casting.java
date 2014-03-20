@@ -1,4 +1,4 @@
-/*
+/* 20140320 dima 
  * Learning forced casting
  * Lesnevsky p.163
  */
