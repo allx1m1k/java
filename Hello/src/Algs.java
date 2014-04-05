@@ -13,16 +13,16 @@
  * </ol>
  */
 public class Algs {
-/**
- * 20140317 dima 
- * Точка входа
- * @param args массив строковых аргументов
- */
+	/**
+	 * 20140317 dima 
+	 * РўРѕС‡РєР° РІС…РѕРґР°
+	 * @param args РјР°СЃСЃРёРІ СЃС‚СЂРѕРєРѕРІС‹С… Р°СЂРіСѓРјРµРЅС‚РѕРІ
+	 */
 	public static void main(String[] args) {
-//	int arg1=Integer.parseInt(args[0]);  //разбор агрументов метода main() 
-//	int arg2=Integer.parseInt(args[1]);  //то же Необходимо задать все 3-и аргумента
-//	int arg3=Integer.parseInt(args[2]);  //то же
-	/*Вывод в консоль аргументов, для примера на стр. 169
+//		int arg1=Integer.parseInt(args[0]);  //СЂР°Р·Р±РѕСЂ Р°РіСЂСѓРјРµРЅС‚РѕРІ РјРµС‚РѕРґР° main() 
+//		int arg2=Integer.parseInt(args[1]);  //С‚Рѕ Р¶Рµ РќРµРѕР±С…РѕРґРёРјРѕ Р·Р°РґР°С‚СЊ РІСЃРµ 3-Рё Р°СЂРіСѓРјРµРЅС‚Р°
+//		int arg3=Integer.parseInt(args[2]);  //С‚Рѕ Р¶Рµ
+		/*Р’С‹РІРѕРґ РІ РєРѕРЅСЃРѕР»СЊ Р°СЂРіСѓРјРµРЅС‚РѕРІ, РґР»СЏ РїСЂРёРјРµСЂР° РЅР° СЃС‚СЂ. 169
 	 * System.out.println(arg1);
 	 * System.out.println(arg2);
 	 * System.out.println(arg3); 
@@ -43,27 +43,27 @@ public class Algs {
 
 
 		
-//		System.out.println("Фибоначчи рекурсия: " + fibonacci(arg1)); //рекурсивный метод чисел Фибоначчи
-//		System.out.println("Фибоначчи итерация: " + fibonacci1(arg1)); //итерационный метод чисел Фибоначчи
+//		System.out.println("Г”ГЁГЎГ®Г­Г Г·Г·ГЁ Г°ГҐГЄГіГ°Г±ГЁГї: " + fibonacci(arg1)); //Г°ГҐГЄГіГ°Г±ГЁГўГ­Г»Г© Г¬ГҐГІГ®Г¤ Г·ГЁГ±ГҐГ« Г”ГЁГЎГ®Г­Г Г·Г·ГЁ
+//		System.out.println("Г”ГЁГЎГ®Г­Г Г·Г·ГЁ ГЁГІГҐГ°Г Г¶ГЁГї: " + fibonacci1(arg1)); //ГЁГІГҐГ°Г Г¶ГЁГ®Г­Г­Г»Г© Г¬ГҐГІГ®Г¤ Г·ГЁГ±ГҐГ« Г”ГЁГЎГ®Г­Г Г·Г·ГЁ
 		
-		//System.out.println(summ(0.09));		//в метод summ() надо передавать
-		//System.out.println(summ(arg2));	//аргументы от 0 до 1
+		//System.out.println(summ(0.09));		//Гў Г¬ГҐГІГ®Г¤ summ() Г­Г Г¤Г® ГЇГҐГ°ГҐГ¤Г ГўГ ГІГј
+		//System.out.println(summ(arg2));	//Г Г°ГЈГіГ¬ГҐГ­ГІГ» Г®ГІ 0 Г¤Г® 1
 		//System.out.println(summ(arg3));
 
-		/* Ниже пример использования статических методов класса Math
-		 *  без создания объектов
+		/* ГЌГЁГ¦ГҐ ГЇГ°ГЁГ¬ГҐГ° ГЁГ±ГЇГ®Г«ГјГ§Г®ГўГ Г­ГЁГї Г±ГІГ ГІГЁГ·ГҐГ±ГЄГЁГµ Г¬ГҐГІГ®Г¤Г®Гў ГЄГ«Г Г±Г±Г  Math
+		 *  ГЎГҐГ§ Г±Г®Г§Г¤Г Г­ГЁГї Г®ГЎГєГҐГЄГІГ®Гў
 		 */
-		//double a = Math.PI; //присвоение
-		//System.out.println(a); //вывод в консоль статической переменной
-		//System.out.println(Math.round(a)+10); //к округленному a прибавляем 10
-		//System.out.println(Math.E); //вывод в консоль статической переменной
-		//System.out.println(Math.round(Math.E)); //округление до целого
-		//System.out.println(Math.min(Math.E, Math.PI)); //вывод в консоль наименьшей из
-		//статических переменных
+		//double a = Math.PI; //ГЇГ°ГЁГ±ГўГ®ГҐГ­ГЁГҐ
+		//System.out.println(a); //ГўГ»ГўГ®Г¤ Гў ГЄГ®Г­Г±Г®Г«Гј Г±ГІГ ГІГЁГ·ГҐГ±ГЄГ®Г© ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г®Г©
+		//System.out.println(Math.round(a)+10); //ГЄ Г®ГЄГ°ГіГЈГ«ГҐГ­Г­Г®Г¬Гі a ГЇГ°ГЁГЎГ ГўГ«ГїГҐГ¬ 10
+		//System.out.println(Math.E); //ГўГ»ГўГ®Г¤ Гў ГЄГ®Г­Г±Г®Г«Гј Г±ГІГ ГІГЁГ·ГҐГ±ГЄГ®Г© ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г®Г©
+		//System.out.println(Math.round(Math.E)); //Г®ГЄГ°ГіГЈГ«ГҐГ­ГЁГҐ Г¤Г® Г¶ГҐГ«Г®ГЈГ®
+		//System.out.println(Math.min(Math.E, Math.PI)); //ГўГ»ГўГ®Г¤ Гў ГЄГ®Г­Г±Г®Г«Гј Г­Г ГЁГ¬ГҐГ­ГјГёГҐГ© ГЁГ§
+		//Г±ГІГ ГІГЁГ·ГҐГ±ГЄГЁГµ ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»Гµ
 		
 	}
 
-	/**Рекурсивный метод вычисления чисел Фибоначчи
+	/**ГђГҐГЄГіГ°Г±ГЁГўГ­Г»Г© Г¬ГҐГІГ®Г¤ ГўГ»Г·ГЁГ±Г«ГҐГ­ГЁГї Г·ГЁГ±ГҐГ« Г”ГЁГЎГ®Г­Г Г·Г·ГЁ
 	 * 
 	 */
 	public static int fibonacci(int n){
@@ -74,7 +74,7 @@ public class Algs {
 	public static int fibonacci1(int n){
 		int next=1, p1=1,p2=1;
 		if (n<0) {
-			 System.out.println("Отрицательный аргумент");
+			 System.out.println("ГЋГІГ°ГЁГ¶Г ГІГҐГ«ГјГ­Г»Г© Г Г°ГЈГіГ¬ГҐГ­ГІ");
 			 return -1;
 		}
 		if(n<3) return 1; 
@@ -94,7 +94,7 @@ public class Algs {
 			result=result+a;
 		
 		}
-		System.out.println("возврат значения");
+		System.out.println("ГўГ®Г§ГўГ°Г ГІ Г§Г­Г Г·ГҐГ­ГЁГї");
 		return result;		
 	}
 

@@ -14,7 +14,7 @@ public class Cycle {
 				
 		System.out.println("The latest value of temp is " +  conditionalPrinting());
 		System.out.println();
-		parametricPrinting(5);
+		parametricPrinting(15);
 		/*
 		System.out.println("The randomized value = " +  anyValue);
 		System.out.println("The randomized value multiplied on 10 = " +  10 * Math.random());
@@ -39,11 +39,11 @@ public class Cycle {
 	
 	/**
 	 * 
-	 * @param ;
-	 * @return
+	 * @param int i boundary value for printnig;
+	 * @return int;
 	 */
 	public static int parametricPrinting (int i) {
-		for (int index = 0; index < i; index++) {
+		for (int index = 0; index <= i; index++) {
 			System.out.println("Index is " +  index);		
 		}
 		return 0;
