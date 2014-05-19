@@ -12,8 +12,9 @@ public class Factorial {
 
 		Scanner in = new Scanner(System.in);
 		int inputValue = in.nextInt();
-		System.out.print("The factorial of " + inputValue + " is " + factorial(inputValue));
-		
+		if (inputValue > 0)  
+			System.out.print("The factorial of " + inputValue + " is " + factorial(inputValue));
+		else System.out.print("The input value is below zero");
 	}
 	
 	public static int factorial(int f){
