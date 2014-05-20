@@ -11,6 +11,8 @@ public class Class2 {
 	arrayOfIntegers = new int[7]; //создание, выделение памяти создание все эелементы нулевые изменить размер нельзя
 	//изменять размеры массива можно только в коллекциях - динамические массывы
 	
+	int[] newArrayOfIntegers = new int[7];
+	
 	arrayOfIntegers[0] = 8; //заполнение значениями
 	arrayOfIntegers[1] = 11;
 	
@@ -19,10 +21,11 @@ public class Class2 {
 	
 	int [] values = {1, 33, -6, 0, 22, 66, 8};
 	
-	System.arraycopy (values, 2, arrayOfIntegers, 3, 4);
+	System.arraycopy (values, 2, arrayOfIntegers, 3, 4); //копируем четыре элемента массива values в массив arrayOfIntegers
+	System.arraycopy (values, 2, newArrayOfIntegers, 0, 4); //аргументы Object src, srcPos, Object dest, destPos, length  
 	
-	
-	System.out.println(Arrays.toString(arrayOfIntegers)); //сортировка
+	System.out.println(Arrays.toString(arrayOfIntegers)); //
+	System.out.println("newArrayOfIntegers " + Arrays.toString(newArrayOfIntegers)); //
 	
 	Arrays.sort(values);
 	
