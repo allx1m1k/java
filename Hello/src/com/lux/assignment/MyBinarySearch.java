@@ -1,4 +1,4 @@
-package com.lux.quiz;
+package com.lux.assignment;
 
 import java.util.Arrays;
 
