@@ -1,5 +1,5 @@
 /**
- * @author dpeltik
+ * @author allx1m1k
  * 
  *Ќайти индекс введенного пользователем числа в заданном упор€доченном массиве целых чисел, использу€ метод двоичного
  *поиска. ≈сли число не найдено, то вывести индекс позиции в которую этот элемент мог бы быть добавлен с сохранением
@@ -22,14 +22,14 @@ public class MyBinarySearch {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int[] values ={4, 7, 28, -5, 12, 9, 11, 0, -9, 1, };
+		int[] values ={4, 7, 28, -5, 12, 9, 11, 0, -9, 1, 99, 100, 54, 36, 38 };
 		
 		Arrays.sort(values); //упор€дочим массив
 		/* System.out.println(Arrays.binarySearch(values, 9)); //выводим индекс элемента который ищем
 		 * 
 		 */
 		
-		int a = 9; //что ищем 
+		int a = 38; //что ищем 
 		int lowIndex = 0; //индекс первого элемента
 		int highIndex = values.length - 1; //индекс последнего эл-та
 		int i = (lowIndex + highIndex) / 2 ; //счетчик
