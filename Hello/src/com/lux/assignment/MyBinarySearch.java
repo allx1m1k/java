@@ -22,14 +22,14 @@ public class MyBinarySearch {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int[] values ={4, 7, 28, -5, 12, 9, 11, 0, -9, 1, 99, 100, 54, 36, 38 };
+		int[] values ={4, 7, 28, 0, 140, -5, 12, 9, 11, 0, -9, 1, 99, 100, 54, 36, 38 };
 		
 		Arrays.sort(values); //упорядочим массив
 		/* System.out.println(Arrays.binarySearch(values, 9)); //выводим индекс элемента который ищем
 		 * 
 		 */
 		
-		int a = 38; //что ищем 
+		int a = 7; //что ищем 
 		int lowIndex = 0; //индекс первого элемента
 		int highIndex = values.length - 1; //индекс последнего эл-та
 		int i = (lowIndex + highIndex) / 2 ; //счетчик
