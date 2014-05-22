@@ -28,30 +28,30 @@ public class DelArrayDoubles {
 	public static int[] showDoubles(int[] massiv){
 		
 		for(int i = 0; i < massiv.length; i++){ //итеративно берем i-ый элемент массива во внешнем цикле
-			for (int j = i + 1; j < massiv.length; j++){
+			for (int j = 0; j < massiv.length; j++){
 				//if (isDouble(massiv, i, j) == true) 
-					System.out.println("значение дл€ поииска дубл€ " + massiv[i] + " значение с которым провер€м " + massiv[j] + " " + isDouble(massiv, i, massiv[j]));
+					System.out.println("значение дл€ поииска дубл€ " + massiv[i] + " значение с которым провер€м " + massiv[j] + " " + isDouble(massiv, i, massiv[j], j));
 				
 			}
-		}
-			
-				
+		}		
 		return massiv;
 		
 	}
 	/**
-	 * 	 
+	 * “ут нужен цикл потому что мы выдергиваем один элемент и массива и его сравниваем со _всеми_ остальными элементами!	 
 	 * @param massiv - масcив в котором ищем дубли
-	 * @param index - индекс эелемента значение которого хотим проверить на дубли
+	 * @param indexToCheck - индекс эелемента значение которого хотим проверить на дубли
 	 * @param element - с чем провер€ем
+	 * @param elementIndex - индекс эелемента с которым провер€ем
 	 * @return
 	 */
-	public static boolean isDouble(int[] massiv, int index, int element) {
-		
-		if (element != massiv[index])  
+	public static boolean isDouble(int[] massiv, int indexToCheck, int element, int elementIndex) {
+			
+		if (element != massiv[indexToCheck] & indexToCheck != (elementIndex - 1))  
 			return false;
 		else 
-			return true;	
+			return true;
+			
 	}
 
 }
