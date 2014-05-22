@@ -24,7 +24,7 @@ public class DelArrayDoubles {
 		
 	}
 	
-	//статический метод удаления дублей в массиве и приведения размерности массива 
+	//статический метод отображения дублей в массиве и приведения размерности массива 
 	public static int[] showDoubles(int[] massiv){
 		
 		for(int i = 0; i < massiv.length; i++){ //итеративно берем i-ый элемент массива во внешнем цикле
@@ -38,7 +38,7 @@ public class DelArrayDoubles {
 		
 	}
 	/**
-	 * Тут нужен цикл потому что мы выдергиваем один элемент и массива и его сравниваем со _всеми_ остальными элементами!	 
+	 * 	 
 	 * @param massiv - масcив в котором ищем дубли
 	 * @param indexToCheck - индекс эелемента значение которого хотим проверить на дубли
 	 * @param element - с чем проверяем
@@ -47,7 +47,7 @@ public class DelArrayDoubles {
 	 */
 	public static boolean isDouble(int[] massiv, int indexToCheck, int element, int elementIndex) {
 			
-		if (element != massiv[indexToCheck] & indexToCheck != (elementIndex - 1))  
+		if (element != massiv[indexToCheck] & indexToCheck != elementIndex)  
 			return false;
 		else 
 			return true;
