@@ -1,7 +1,7 @@
 /**
  * @author allx1m1k
  * 
- *Найти и удалить дубликаты из заданного массива целых чисел
+ *Найти и удалить/отобразить дубликаты из заданного массива целых чисел
  *	
  */
 package com.lux.assignment;
@@ -17,15 +17,41 @@ public class DelArrayDoubles {
 		// TODO Auto-generated method stub
 
 		int[] values = {1, 0, 7, 1, -1, 5, 7}; //создадим массив
-		delDoubles(values);
+		//delDoubles(values); //вызов статического метода без создания объекта
+		System.out.println(Arrays.toString(values));
+		//System.out.println(isDouble(values, 0, 1));
+		showDoubles(values);
+		
 	}
 	
-	
-	public static int[] delDoubles(int[] i){
+	//статический метод удаления дублей в массиве и приведения размерности массива 
+	public static int[] showDoubles(int[] massiv){
 		
-		System.out.println(Arrays.toString(i));
-		return i;
+		for(int i = 0; i < massiv.length; i++){ //итеративно берем i-ый элемент массива во внешнем цикле
+			for (int j = i + 1; j < massiv.length; j++){
+				//if (isDouble(massiv, i, j) == true) 
+					System.out.println("значение для поииска дубля " + massiv[i] + " значение с которым проверям " + massiv[j] + " " + isDouble(massiv, i, massiv[j]));
+				
+			}
+		}
+			
+				
+		return massiv;
 		
+	}
+	/**
+	 * 	 
+	 * @param massiv - масcив в котором ищем дубли
+	 * @param index - индекс эелемента значение которого хотим проверить на дубли
+	 * @param element - с чем проверяем
+	 * @return
+	 */
+	public static boolean isDouble(int[] massiv, int index, int element) {
+		
+		if (element != massiv[index])  
+			return false;
+		else 
+			return true;	
 	}
 
 }
