@@ -16,7 +16,7 @@ public class DelArrayDoubles {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int[] values = {1, 0, 7, 1, -1, 5, 7}; //создадим массив
+		int[] values = {1, 0, 7, 1, -1, 5, 7, 7}; //создадим массив
 		//delDoubles(values); //вызов статического метода без создания объекта
 		System.out.println(Arrays.toString(values));
 		//System.out.println(isDouble(values, 0, 1));
