@@ -16,7 +16,7 @@ public class DelArrayDoubles {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int[] values = {1, 0, 7, 1, -1, 5, 7, 7}; //создадим массив
+		int[] values = {7, 0, 7, 0, -1, 5, 7, 7, 1, 10, 9}; //создадим массив
 		//delDoubles(values); //вызов статического метода без создания объекта
 		System.out.println(Arrays.toString(values));
 		//System.out.println(isDouble(values, 0, 1));
@@ -29,9 +29,8 @@ public class DelArrayDoubles {
 		
 		for(int i = 0; i < massiv.length; i++){ //итеративно берем i-ый элемент массива во внешнем цикле
 			for (int j = 0; j < massiv.length; j++){
-				//if (isDouble(massiv, i, j) == true) 
+				if (i != j) //отображаем только для элементов из внутреннего цикла, индекс которых отличен от индекаса элемента из внешнего цикла
 					System.out.println("значение для поииска дубля " + massiv[i] + " значение с которым проверям " + massiv[j] + " " + isDouble(massiv, i, massiv[j], j));
-				
 			}
 		}		
 		return massiv;
