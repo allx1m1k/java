@@ -40,10 +40,7 @@ public class MyBinarySearchRecursive {
 			lowIndex++; //иначе увеличим нижнюю границу на 1
 		}			
 		currentIndex = (lowIndex + highIndex) / 2 ; //счетчик		
-		//System.out.println("lowIndex is " + lowIndex + " highIndex is " + highIndex + " currentIndex is " + currentIndex);
-		
-		//System.out.println("Index of value " + a + " in array is " + currentIndex); //выведем массив)		
-		
+		//рекурсивно вызываем метод
 		return recBinSearch(values, lowIndex, highIndex, currentIndex, a);	
 	}
 	
