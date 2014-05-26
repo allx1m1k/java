@@ -1,13 +1,12 @@
-package com.lux.assignment;
-
-import java.util.Arrays;
-
 /**
  * Реализовать метод двоичного поиска с помощью рекурсивного метода
  * @author dima
  *
  */
 
+package com.lux.assignment;
+
+import java.util.Arrays;
 
 public class MyBinarySearchRecursive {
 
@@ -52,7 +51,7 @@ public class MyBinarySearchRecursive {
 		//приведем array в Strung для вывод эелементов массива
 		Arrays.sort(values); //упорядочим массив
 		String toPrint = Arrays.toString(values);
-		int a = 140; //что ищем
+		int a = -5; //что ищем
 		int lowIndex = 0; //индекс первого элемента
 		int highIndex = values.length - 1; //индекс последнего эл-та
 		int i = (lowIndex + highIndex) / 2 ; //счетчик		
