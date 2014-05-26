@@ -37,8 +37,11 @@ public class RectangleDemo {
 	 *  
 	 */
 	
+	//передадим ссылку на объект
 	changeHeight(rect1);
 	System.out.println("Rect1 height " + rect1.height);
+	
+	rect1.setHeight(35);
 	
 	}
 
