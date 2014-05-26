@@ -48,7 +48,7 @@ public class MyBinarySearchRecursive {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int[] values ={4, 7, 28, 0, 140, -5}; //массив
+		int[] values ={4, 7, 28, 0, 140, -5, 138, -9, 44, 15, -99, 1, 1024}; //массив
 		//приведем array в Strung для вывод эелементов массива
 		Arrays.sort(values); //упорядочим массив
 		String toPrint = Arrays.toString(values);
