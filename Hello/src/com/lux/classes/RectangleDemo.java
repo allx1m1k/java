@@ -13,15 +13,22 @@ public class RectangleDemo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		 Rectangle rect1 = new Rectangle();
-		 rect1.height = 2;
-		 rect1.width = 5;
+		 rect1.setHeight(2);
+		 rect1.setWidth(5);
+		 
+		 Rectangle rect2 = new Rectangle(15,15);
 		 
 		 System.out.println("Rect1 " + rect1.getArea());
+		 //обращение к статическим полям
+		 System.out.println(Rectangle.testConstant);
 		 
+		 //обращение к статическим полям - моветон т.к. обращаемся через имя объекта, а не класса
+		 System.out.println(rect1.testConstant);
+		 System.out.println(Rectangle.sumArea(rect1, rect2));
 		 
-		 Rectangle rect2 = new Rectangle();
-		 rect2.height = 3;
-		 rect2.width = 6;
+		 Rectangle rect3 = new Rectangle();
+		 rect2.setHeight(3);
+		 rect2.setWidth(9);
 		 System.out.println("Rect2 " + rect2.getArea());
 		 
 		 rect1 = rect2; //потерять один из объектов и обе переменные ссылаются на один и тот же объект
