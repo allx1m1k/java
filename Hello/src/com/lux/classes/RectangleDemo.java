@@ -4,9 +4,9 @@ public class RectangleDemo {
 
 
 	public static void changeHeight(Rectangle i) {
-		i.height = 200;
+		i.setHeight(200);
 	}
-	/**
+/**
  * Основная точнка вход	
  * @param args
  */
@@ -32,7 +32,7 @@ public class RectangleDemo {
 		 System.out.println("Rect2 " + rect2.getArea());
 		 
 		 rect1 = rect2; //потерять один из объектов и обе переменные ссылаются на один и тот же объект
-		 rect1.width = 100; //присвоить ссылке на первый объект ссылку на второй объект, теперь разные ссылки смотрят на один объект
+		 rect1.setWidth(100); //присвоить ссылке на первый объект ссылку на второй объект, теперь разные ссылки смотрят на один объект
 		 
 		 System.out.println(rect1.getArea());
 		 System.out.println(rect2.getArea());
@@ -46,7 +46,7 @@ public class RectangleDemo {
 	
 	//передадим ссылку на объект
 	changeHeight(rect1);
-	System.out.println("Rect1 height " + rect1.height);
+	System.out.println("Rect1 height " + rect1.getHeight());
 	
 	rect1.setHeight(35);
 	
