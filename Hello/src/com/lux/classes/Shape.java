@@ -1,14 +1,19 @@
 package com.lux.classes;
 
-public class Shape {
+//класс объявлен абстрактным т.к. у него есть метод draw который с помощью динамического полиморфизма перегружен
+//т.е. в каждом классе-наследнике от Shape метод draw ведет себе по разному
+public abstract class Shape {
 
-	private String color;
+	//атрибут фигуры - цвет
+    private String color;
 	
-	public Shape() {
+	//конструктор по умолчанию
+    //у каждого экземпляра наследника от класса Shape будет инициализирован атрибут color и его значение будет red
+    public Shape() {
 		
 		this.color = "red";
 	}
-	
+    //конструктор
 	public Shape(String color) {
 		
 		this.color = color;
@@ -22,8 +27,11 @@ public class Shape {
 	public void setColor(String c){
 		this.color = c;
 	}
-	
-	public static void main(String[] args) {
+
+    //метод будет переодпределен в дочерних классах
+    public abstract void draw();
+
+    public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 	}

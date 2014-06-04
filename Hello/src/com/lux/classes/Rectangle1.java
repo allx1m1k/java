@@ -1,21 +1,23 @@
 package com.lux.classes;
 
 public class Rectangle1 extends Shape {
-	//в rectangle1 по€вилист все члены Shape
+	//в rectangle1 по€вилис все члены Shape т.к. этот класс наследуетс€ от Shape
 	//
-	//пераой строчкой всегда идут вызову конструктора
+	//первой строчкой всегда идут вызовы конструктора
 	//super - обращение к методам или констуктору супер-класса 
-	//this - может быть только первой строчкой
-	//this(w, h) - вызво конструктора нашего класса , должен ьыть определен
+	//this - может быть только первой строчкой, т.е. либо super либо this в первой строке
+	//this(w, h) - вызов конструктора нашего класса , конструкто должен быть определен
 	private int width;
 	private int height;
 	
-	public Rectangle1(){
+	//конструктор
+    public Rectangle1(){
 		width = 1;
 		height = 1;
 	}
 	
-	public Rectangle1(String color, int w, int h){
+	//конструктор
+    public Rectangle1(String color, int w, int h){
 		super(color);//с помощью ключевого слова super вызываем  онструктор с параметром родительского класса
 		//setColor(color) также будет работать
 		this.width = w;
@@ -33,9 +35,8 @@ public class Rectangle1 extends Shape {
 		return width;
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+    public void draw(){
+        System.out.println("I'm Rectangle");
+    }
 
 }
