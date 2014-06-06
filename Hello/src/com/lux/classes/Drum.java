@@ -8,7 +8,7 @@ package com.lux.classes;
 public class Drum extends MusciInstrument {
 
     public Drum(String name, String color) {
-        super("Drum", color);
+        super(name, color);
     }
 
     @Override
