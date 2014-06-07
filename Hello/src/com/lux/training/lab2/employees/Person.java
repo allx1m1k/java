@@ -9,9 +9,34 @@ public abstract class Person implements Paybale {
     private String name;
     private String surName;
     private Date birthday;
-    private enum Dept {Finance, IT, Organizational};
-    private enum Position {Head, Manager, Senior, Junior};
 
+    protected Person(String name, String surName, Date birthday) {
+        this.name = name;
+        this.surName = surName;
+        this.birthday = birthday;
+    }
 
+    public String getName() {
+        return name;
+    }
 
+    public String getSurName() {
+        return surName;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurName(String surName) {
+        this.surName = surName;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
 }
