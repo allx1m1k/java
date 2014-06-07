@@ -5,7 +5,7 @@ import com.lux.training.utils.Date;
 /**
  * Created by dima on 07.06.2014.
  */
-public class Person {
+public abstract class Person implements Paybale {
     private String name;
     private String surName;
     private Date birthday;
