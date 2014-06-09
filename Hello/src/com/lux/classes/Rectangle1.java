@@ -1,6 +1,6 @@
 package com.lux.classes;
 
-public class Rectangle1 extends Shape {
+public class Rectangle1 extends Shape implements Measurable {
 	//в rectangle1 появилис все члены Shape т.к. этот класс наследуется от Shape
 	//
 	//первой строчкой всегда идут вызовы конструктора
@@ -12,8 +12,8 @@ public class Rectangle1 extends Shape {
 	
 	//конструктор
     public Rectangle1(){
-		width = 1;
-		height = 1;
+		width = 10;
+		height = 11;
 	}
 	
 	//конструктор
@@ -39,4 +39,8 @@ public class Rectangle1 extends Shape {
         System.out.println("I'm Rectangle");
     }
 
+    @Override
+    public int getArea() {
+        return getHeight() * getWidth();
+    }
 }

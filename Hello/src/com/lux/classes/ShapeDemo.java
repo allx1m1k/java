@@ -26,9 +26,13 @@ public class ShapeDemo {
         rec1.draw();
         //запросим значение по умолчанию дл€ экзепл€ра Rectangle
         System.out.println(rec1.getColor());
+        System.out.println("Area of rec1 is " + rec1.getArea());
 
         Shape shape2 = new Line1();
         System.out.println("÷вет линии shape2 is " + shape2.getColor());
+
+        //объект типа Line1 нарисует себа
+        shape2.draw();
 	}
 
 }
