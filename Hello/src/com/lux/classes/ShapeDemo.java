@@ -16,7 +16,7 @@ public class ShapeDemo {
 
         Shape shape1 = new Rectangle1(); //в переменной shape1 находитс€ ссылка на объект типа Rectangle
         //ссылка класса shape поэтому можем добратьс€ только к ее атрибутам, а не к атрибутамм Rectangle
-        //т.е. shape1.getWidth(); - не сработает
+        //т.е. shape1.getWidth(); - не сработает, т.к. в Shape нет такого метода
         //System.out.println(shape1.getWidth()); - метод Rectangle
         //зато сработают те методы которые определены в Shape
         //см. лекцию Class6
@@ -28,7 +28,7 @@ public class ShapeDemo {
         System.out.println(rec1.getColor());
 
         Shape shape2 = new Line1();
-        System.out.println(shape2.getColor());
+        System.out.println("÷вет линии shape2 is " + shape2.getColor());
 	}
 
 }
