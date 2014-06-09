@@ -29,10 +29,11 @@ public class ShapeDemo {
         System.out.println("Area of rec1 is " + rec1.getArea());
 
         Shape shape2 = new Line1();
-        System.out.println("Цвет линии shape2 is " + shape2.getColor());
+        System.out.println("Цвет линии1 shape111233777 is " + shape2.getColor());
 
         //объект типа Line1 нарисует себа
         shape2.draw();
+        rec1.draw();
 	}
 
 }

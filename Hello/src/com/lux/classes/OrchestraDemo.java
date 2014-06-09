@@ -11,8 +11,8 @@ public class OrchestraDemo {
         orchestra.addInstrument(new Singer("Petr","Petrov", false));
         orchestra.addInstrument(new Violine("n1","red"));
         orchestra.addInstrument(new Drum("n2","green"));
-        orchestra.addInstrument(new Singer("Ivan","dddd", false));
-        
+        //orchestra.addInstrument(new Singer("Ivan","dddd", false));
+        orchestra.addInstrument(new Drum("n24","gggg"));
         //orchestra.addInstrument(new Singer("Petr","Petrov", false));
         //orchestra.addInstrument(new Drum("n3","green"));
         //как MusicInstrum так и People умеют играть
