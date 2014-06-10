@@ -18,12 +18,14 @@ public class PaymentCalcDemo {
         payroll.addEmployee(new EmployeeMonthlyPaybale("Ivan", "Ivanov", "Engineer", "IT dept", date));
         payroll.addEmployee(new EmployeeExtPaybale("Pete", "Petrov", "Manager", "IT dept", new Date(date)));
         payroll.addEmployee(new EmployeeHourlyPaybale("Sidor", "Sidorov", "Accountant", "IT dept", new Date (15, 6, 2010 )));
-        payroll.pay();
+        //payroll.pay();
 
         payroll.getFioAtIndex(2);
         payroll.getRoleAtIndex(2);
         payroll.getPaymentTypeAtIndex(2);
+        
         System.out.println("");
+        
         payroll.getFioAtIndex(0);
         payroll.getRoleAtIndex(0);
         payroll.getPaymentTypeAtIndex(0);
