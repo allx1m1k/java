@@ -35,6 +35,14 @@ public class Payroll {
     	System.out.println("Department: " + members[index].getDepartment());
     }
     
+    //метод определения и печати в консоль конкретного типа экземпляра
+    public void getPaymentTypeAtIndex(int index){
+    	//System.out.println("Position: " + members[index].getPosition());
+    	System.out.println("Payment type: " + members[index].getClass());
+    	
+    	
+    }
+    
     //метод платить
     public void pay(){
         for (Person employee: members) {
