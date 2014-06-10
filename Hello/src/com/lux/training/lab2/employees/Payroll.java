@@ -8,10 +8,10 @@ import com.lux.classes.Playable;
 public class Payroll {
     //чтобы хранить список сотрудников в платежной ведомости
     private Person[] members;
-    //счетчик кол-ва интсрументов в орекстре
+    //счетчик кол-ва отрудников в ведомости
     private int cnt;
 
-    //конструктор
+    //конструктор передаем кол-во сотрудников в ведомомсти
     public Payroll(int numCount){
         members = new Person[numCount];
         cnt = 0;
@@ -23,11 +23,10 @@ public class Payroll {
         members[cnt++] = empl;
     }
 
-
     //метод платить
     public void pay(){
         for (Person employee: members) {
-            employee.pay();
+            employee.pay(); //за счет динамического полиморфизма обращаемся к конкретному экземпляру через ссылку супер-типа 
         }
     }
 }
