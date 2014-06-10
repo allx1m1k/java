@@ -34,6 +34,7 @@ public class ShapeDemo {
         //объект типа Line1 нарисует себа
         shape2.draw();
         rec1.draw();
+        System.out.println("Площадь Rectangle1 rec1 is " + rec1.getArea());
 	}
 
 }
