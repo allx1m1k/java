@@ -15,4 +15,6 @@ public class EmployeeSalePaybale extends Person{
     public void pay() {
         System.out.println("By sales payable employee");
     }
+
+
 }

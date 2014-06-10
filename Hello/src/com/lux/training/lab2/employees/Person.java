@@ -40,7 +40,6 @@ public abstract class Person implements Paybale {
         return birthday;
     }
 
-    
     public void setName(String name) {
         this.name = name;
     }

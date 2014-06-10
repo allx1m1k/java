@@ -44,23 +44,18 @@ public class Payroll {
     		System.out.println("Payment type: hourly rate");
     	}
     	if (members[index] instanceof EmployeeMonthlyPaybale) {
-    		System.out.println("Payment type: monthly salary");
-    	}
+            System.out.println("Payment type: monthly salary");
+        }
     	if (members[index] instanceof EmployeeSalePaybale) {
     		System.out.println("Payment type: comission");
     	}
-    	
-    	//System.out.println("Payment type: " + members[index].getClass());
     }
-    
-
-    
-    //метод платить
+    //рабочий метод платить
     public void pay(){
-        for (Person employee: members) {
-            employee.pay(); //за счет динамического полиморфизма обращаемся к конкретному экземпляру через ссылку супер-типа 
-        }
+       //for (Person employee: members) {
+       //     employee.pay(); //за счет динамического полиморфизма обращаемся к конкретному экземпляру через ссылку супер-типа
+       // }
+        //members.pay();
     }
-    
-    
+
 }

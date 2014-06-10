@@ -23,7 +23,7 @@ public class PaymentCalcDemo {
         payroll.getFioAtIndex(2);
         payroll.getRoleAtIndex(2);
         payroll.getPaymentTypeAtIndex(2);
-        //payroll.pay();
+        payroll.pay();
         
         System.out.println("");
         
