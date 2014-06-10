@@ -7,12 +7,12 @@ import com.lux.training.utils.Date;
  */
 public class EmployeeExtPaybale extends Person {
 
-    protected EmployeeExtPaybale(String name, String surName, Date birthday) {
-        super(name, surName, birthday);
+    protected EmployeeExtPaybale(String name, String surName, String position, String department, Date birthday) {
+        super(name, surName, position, department, birthday);
     }
 
     @Override
     public void pay() {
-
+        System.out.println("Extended payable employee");
     }
 }

@@ -7,8 +7,9 @@ import com.lux.training.utils.Date;
  */
 public class EmployeeHourlyPaybale extends Person {
 
-    protected EmployeeHourlyPaybale(String name, String surName, Date birthday) {
-        super(name, surName, birthday);
+    protected EmployeeHourlyPaybale(String name, String surName, String position, String department, Date birthday) {
+
+        super(name, surName, position, department, birthday);
     }
 
     @Override

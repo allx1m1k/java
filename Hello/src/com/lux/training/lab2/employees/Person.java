@@ -8,11 +8,15 @@ import com.lux.training.utils.Date;
 public abstract class Person implements Paybale {
     private String name;
     private String surName;
+    private String position;
+    private String department;
     private Date birthday;
 
-    protected Person(String name, String surName, Date birthday) {
+    public Person(String name, String surName, String position, String department, Date birthday) {
         this.name = name;
         this.surName = surName;
+        this.position = position;
+        this.department = department;
         this.birthday = birthday;
     }
 
@@ -22,6 +26,14 @@ public abstract class Person implements Paybale {
 
     public String getSurName() {
         return surName;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public String getDepartment(){
+        return department;
     }
 
     public Date getBirthday() {
