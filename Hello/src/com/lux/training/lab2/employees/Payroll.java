@@ -37,8 +37,20 @@ public class Payroll {
     
     //метод определения и печати в консоль конкретного типа экземпляра
     public void getPaymentTypeAtIndex(int index){
-    	//System.out.println("Position: " + members[index].getPosition());
-    	System.out.println("Payment type: " + members[index].getClass());
+    	if (members[index] instanceof EmployeeExtPaybale) { 
+    		System.out.println("Payment type: comission and base salary");
+    	}
+    	if (members[index] instanceof EmployeeHourlyPaybale) {
+    		System.out.println("Payment type: hourly rate");
+    	}
+    	if (members[index] instanceof EmployeeMonthlyPaybale) {
+    		System.out.println("Payment type: monthly salary");
+    	}
+    	if (members[index] instanceof EmployeeSalePaybale) {
+    		System.out.println("Payment type: comission");
+    	}
+    	
+    	//System.out.println("Payment type: " + members[index].getClass());
     	
     	
     }
