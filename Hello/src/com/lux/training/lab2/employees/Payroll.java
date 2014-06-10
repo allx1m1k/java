@@ -51,9 +51,9 @@ public class Payroll {
     	}
     	
     	//System.out.println("Payment type: " + members[index].getClass());
-    	
-    	
     }
+    
+
     
     //метод платить
     public void pay(){

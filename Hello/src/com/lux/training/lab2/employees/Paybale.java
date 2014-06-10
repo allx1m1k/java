@@ -5,4 +5,5 @@ package com.lux.training.lab2.employees;
  */
 public interface Paybale {
     public void pay();
+    //public void payAtIndex(int index);
 }

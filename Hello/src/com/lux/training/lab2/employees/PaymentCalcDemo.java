@@ -23,12 +23,14 @@ public class PaymentCalcDemo {
         payroll.getFioAtIndex(2);
         payroll.getRoleAtIndex(2);
         payroll.getPaymentTypeAtIndex(2);
+        //payroll.pay();
         
         System.out.println("");
         
         payroll.getFioAtIndex(0);
         payroll.getRoleAtIndex(0);
         payroll.getPaymentTypeAtIndex(0);
+        
         
         //System.out.println(payroll[2"Day of Birth")
     }
