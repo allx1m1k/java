@@ -15,38 +15,22 @@ public class PaymentCalcDemo {
         //orchestra.addInstrument(new Drum("n2","green"));
         Payroll payroll = new Payroll(4); //создадим платежную ведомость
 
+        payroll.addEmployee(new EmployeeSalePaybale("Serge", "Kryloff", "Manager", "Sales dept", new Date (14, 6, 1986 )));
         payroll.addEmployee(new EmployeeMonthlyPaybale("Ivan", "Ivanov", "Engineer", "IT dept", date));
         payroll.addEmployee(new EmployeeExtPaybale("Pete", "Petrov", "Manager", "IT dept", new Date(date)));
         payroll.addEmployee(new EmployeeHourlyPaybale("Sidor", "Sidorov", "Accountant", "IT dept", new Date (15, 6, 2010 )));
-        payroll.addEmployee(new EmployeeSalePaybale("Serge", "Kryloff", "Manager", "Sales dept", new Date (14, 6, 1986 )));
-        payroll.pay(); // рассчитаем ЗП
 
-        payroll.getFioAtIndex(0);
-        payroll.getRoleAtIndex(0);
-        payroll.getPaymentTypeAtIndex(0);
-        payroll.getPaymentAtIndex(0);
+        // рассчитаем ЗП
+        payroll.pay();
 
-        System.out.println("");
-
-        payroll.getFioAtIndex(1);
-        payroll.getRoleAtIndex(1);
-        payroll.getPaymentTypeAtIndex(1);
-        payroll.getPaymentAtIndex(1);
-
-        System.out.println("");
-
-        payroll.getFioAtIndex(2);
-        payroll.getRoleAtIndex(2);
-        payroll.getPaymentTypeAtIndex(2);
-        payroll.getPaymentAtIndex(2);
-
-        System.out.println("");
-
-        payroll.getFioAtIndex(3);
-        payroll.getRoleAtIndex(3);
-        payroll.getPaymentTypeAtIndex(3);
-        payroll.getPaymentAtIndex(3);
-
-        //System.out.println(payroll[2"Day of Birth")
+        // сформируем строки платежной ведомомсти
+        for (int i = 0; i < payroll.getPayrollRows(); i++) {
+            payroll.getFioAtIndex(i); //ФИО
+            payroll.getRoleAtIndex(i); //позиция и департамент
+            payroll.getPaymentTypeAtIndex(i); //тип оплаты
+            payroll.getPaymentAtIndex(i); //финаносвые подробности выплаты
+            System.out.println("");
+        }
     }
+
 }

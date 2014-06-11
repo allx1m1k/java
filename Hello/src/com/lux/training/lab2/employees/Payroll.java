@@ -18,9 +18,13 @@ public class Payroll {
     }
     //метод добавления персоны
     public void addEmployee(Person empl){
-
         //numbers[cnt++] = instrument;
         members[cnt++] = empl;
+    }
+
+    //метод определения кол-ва строк в платежной ведомомсти
+    public int getPayrollRows(){
+        return cnt;
     }
 
     //метод вывода ФИО

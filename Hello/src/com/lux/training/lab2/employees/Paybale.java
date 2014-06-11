@@ -14,4 +14,5 @@ public interface Paybale {
     public double getRatePerHour();
     public double getCommissionRate();
     public int getPeriodHours();
+
 }
