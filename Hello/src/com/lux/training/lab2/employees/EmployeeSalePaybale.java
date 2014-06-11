@@ -16,5 +16,8 @@ public class EmployeeSalePaybale extends Person{
         System.out.println("By sales payable employee");
     }
 
-
+    @Override
+    public double getPayment() {
+        return 0;
+    }
 }

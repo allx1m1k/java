@@ -7,4 +7,7 @@ public interface Paybale {
     //рабочий метод public void pay(int index)
     //public void payAtIndex(int index);
     public void pay();
+    //public double getSalary();
+
+    public double getPayment();
 }

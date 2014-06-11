@@ -50,6 +50,27 @@ public class Payroll {
     		System.out.println("Payment type: comission");
     	}
     }
+
+    public void getPaymentAtIndex(int index){
+        if (members[index] instanceof EmployeeExtPaybale) {
+            System.out.println("Payment type: comission and base salary");
+        }
+
+        /**
+         * TODO реализовать метод вывода salary
+         */
+        if (members[index] instanceof EmployeeHourlyPaybale) {
+            //System.out.println("Salary: " + members[index].getSalary());
+            System.out.println("Payment: " + members[index].getPayment());
+        }
+        if (members[index] instanceof EmployeeMonthlyPaybale) {
+            //System.out.println("Payment type: monthly salary");
+            System.out.println("Salary: " + members[index].getPayment());
+        }
+        if (members[index] instanceof EmployeeSalePaybale) {
+            System.out.println("Payment type: comission");
+        }
+    }
     //рабочий метод платить
     public void pay(){
        //for (Person employee: members) {
