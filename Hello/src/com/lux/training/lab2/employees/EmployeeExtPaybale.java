@@ -7,6 +7,8 @@ import com.lux.training.utils.Date;
  */
 public class EmployeeExtPaybale extends Person {
     double ratePerMonth; //месячная ставка зарплаты
+    private double ratePerHour; //часовая ставка зарплаты
+    private int periodHours; //кол-во часов к оплате
     double sales; //сумма продаж
     double salesRate; //процент комиссии
     double commission; //сумма комиссии
@@ -18,12 +20,28 @@ public class EmployeeExtPaybale extends Person {
     }
 
     @Override
+    public double getPayment() {
+        return payment;
+    }
+
+    @Override
+    public double getRatePerMonth() {
+        return ratePerMonth;
+    }
+
+    @Override
+    public int getPeriodHours() {
+        return periodHours;
+    }
+
+    @Override
+    public double getRatePerHour() {
+        return ratePerHour;
+    }
+
+    @Override
     public void pay() {
         System.out.println("Extended payable employee");
     }
 
-    @Override
-    public double getPayment() {
-        return 0;
-    }
 }

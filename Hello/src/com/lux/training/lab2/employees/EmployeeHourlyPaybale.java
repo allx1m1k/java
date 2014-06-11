@@ -6,6 +6,7 @@ import com.lux.training.utils.Date;
  * Created by dima on 07.06.2014.
  */
 public class EmployeeHourlyPaybale extends Person {
+    private double ratePerMonth; //месячная ставка зарплаты
     private double ratePerHour; //часовая ставка зарплаты
     private int periodHours; //кол-во часов к оплате
     private double payment; //к оплате
@@ -14,7 +15,8 @@ public class EmployeeHourlyPaybale extends Person {
         super(name, surName, position, department, birthday);
         this.ratePerHour = 10.0;
         this.periodHours = 120;
-        this.payment = ratePerHour * periodHours;
+        this.payment = 0;
+        //this.payment = ratePerHour * periodHours;
     }
 
     public double getRatePerHour() {
@@ -23,10 +25,6 @@ public class EmployeeHourlyPaybale extends Person {
 
     public void setRatePerHour(double ratePerHour) {
         this.ratePerHour = ratePerHour;
-    }
-
-    public int getPeriodHours() {
-        return periodHours;
     }
 
     public void setPeriodHours(int periodHours) {
@@ -38,14 +36,25 @@ public class EmployeeHourlyPaybale extends Person {
     }
 
     @Override
-    public void pay() {
-
-        //System.out.println("Hourly payable employee");
-        payment = ratePerHour * periodHours;
+    public double getRatePerMonth() {
+        return ratePerMonth;
     }
 
     @Override
     public double getPayment() {
         return payment;
     }
+
+    @Override
+    public int getPeriodHours() {
+        return periodHours;
+    }
+
+    @Override
+    public void pay() {
+
+        //System.out.println("Hourly payable employee");
+        payment = ratePerHour * periodHours;
+    }
+
 }

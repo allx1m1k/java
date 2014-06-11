@@ -10,4 +10,10 @@ public interface Paybale {
     //public double getSalary();
 
     public double getPayment();
+
+    public double getRatePerMonth();
+
+    public double getRatePerHour();
+
+    public int getPeriodHours();
 }

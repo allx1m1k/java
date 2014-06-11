@@ -7,6 +7,8 @@ import com.lux.training.utils.Date;
  */
 public class EmployeeMonthlyPaybale extends Person {
     private double ratePerMonth; //мес€чна€ ставка зарплаты
+    private double ratePerHour; //часова€ ставка зарплаты
+    private int periodHours; //кол-во часов к оплате
     private int periodPayment; //кол-во мес€цев к оплате
     private double payment; //к оплате
 
@@ -14,17 +16,10 @@ public class EmployeeMonthlyPaybale extends Person {
         super(name, surName, position, department, birthday);
         this.ratePerMonth = 3000.00;
         this.periodPayment = 3;
-        this.payment = ratePerMonth * periodPayment;
+        this.payment = 0;
+        //this.payment = ratePerMonth * periodPayment;
     }
 
-
-    public double getRatePerMonth() {
-        return ratePerMonth;
-    }
-
-    public double getPayment() {
-        return payment;
-    }
 
     public int getPeriodPayment() {
         return periodPayment;
@@ -39,22 +34,30 @@ public class EmployeeMonthlyPaybale extends Person {
     }
 
     @Override
+    public double getPayment() {
+        return payment;
+    }
+
+    @Override
+    public double getRatePerMonth() {
+        return ratePerMonth;
+    }
+
+    @Override
+    public double getRatePerHour() {
+        return ratePerHour;
+    }
+
+    @Override
+    public int getPeriodHours() {
+        return periodHours;
+    }
+
+    @Override
     public void pay() {
         //System.out.println("Monthly payable employee");
         //payment = ratePerMonth * periodPayment == null;
         payment = getPeriodPayment() * getRatePerMonth();//рассчитать «ѕ
 
     }
-
-
-    /*
-	@Override
-	public void payAtIndex(int index) {
-		// TODO Auto-generated method stub
-        System.out.println("Salary = " + this.ratePerMonth);
-		
-	}
-	
-*/
-
 }

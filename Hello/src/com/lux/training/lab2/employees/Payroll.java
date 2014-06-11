@@ -53,30 +53,29 @@ public class Payroll {
 
     public void getPaymentAtIndex(int index){
         if (members[index] instanceof EmployeeExtPaybale) {
-            System.out.println("Payment type: comission and base salary");
+            //System.out.println("Payment type: comission and base salary");
+            System.out.println("Payment: " + members[index].getPayment());
         }
-
-        /**
-         * TODO реализовать метод вывода salary
-         */
         if (members[index] instanceof EmployeeHourlyPaybale) {
             //System.out.println("Salary: " + members[index].getSalary());
+            System.out.println("Hourly rate: " + members[index].getRatePerHour());
             System.out.println("Payment: " + members[index].getPayment());
         }
         if (members[index] instanceof EmployeeMonthlyPaybale) {
             //System.out.println("Payment type: monthly salary");
-            System.out.println("Salary: " + members[index].getPayment());
+            System.out.println("Salary: " + members[index].getRatePerMonth());
+            System.out.println("Payment: " + members[index].getPayment());
         }
         if (members[index] instanceof EmployeeSalePaybale) {
-            System.out.println("Payment type: comission");
+            //System.out.println("Payment type: comission");
+            System.out.println("Payment: " + members[index].getPayment());
         }
     }
     //рабочий метод платить
     public void pay(){
-       //for (Person employee: members) {
-       //     employee.pay(); //за счет динамического полиморфизма обращаемся к конкретному экземпляру через ссылку супер-типа
-       // }
-        //members.pay();
+       for (Person employee: members) {
+            employee.pay(); //за счет динамического полиморфизма обращаемся к конкретному экземпляру через ссылку супер-типа
+       }
     }
 
 }
