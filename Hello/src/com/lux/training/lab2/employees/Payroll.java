@@ -51,13 +51,18 @@ public class Payroll {
     	}
     }
 
+    //метод формирования строки с фин.информацией и ипечати в консоль фин.данных
     public void getPaymentAtIndex(int index){
         if (members[index] instanceof EmployeeExtPaybale) {
             //System.out.println("Payment type: comission and base salary");
+            System.out.println("Sales amount: " + members[index].getSales());
+            System.out.println("Commission: " + members[index].getCommissionRate());
+            System.out.println("Base salary: " + members[index].getRatePerMonth());
             System.out.println("Payment: " + members[index].getPayment());
         }
         if (members[index] instanceof EmployeeHourlyPaybale) {
             //System.out.println("Salary: " + members[index].getSalary());
+            System.out.println("Working hours: " + members[index].getPeriodHours());
             System.out.println("Hourly rate: " + members[index].getRatePerHour());
             System.out.println("Payment: " + members[index].getPayment());
         }
@@ -68,6 +73,8 @@ public class Payroll {
         }
         if (members[index] instanceof EmployeeSalePaybale) {
             //System.out.println("Payment type: comission");
+            System.out.println("Sales amount: " + members[index].getSales());
+            System.out.println("Commission: " + members[index].getCommissionRate());
             System.out.println("Payment: " + members[index].getPayment());
         }
     }

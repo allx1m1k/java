@@ -9,6 +9,9 @@ public class EmployeeHourlyPaybale extends Person {
     private double ratePerMonth; //месячная ставка зарплаты
     private double ratePerHour; //часовая ставка зарплаты
     private int periodHours; //кол-во часов к оплате
+    double sales; //сумма продаж
+    double commissionRate; //процент комиссии
+    double commission; //сумма комиссии
     private double payment; //к оплате
 
     protected EmployeeHourlyPaybale(String name, String surName, String position, String department, Date birthday) {
@@ -48,6 +51,16 @@ public class EmployeeHourlyPaybale extends Person {
     @Override
     public int getPeriodHours() {
         return periodHours;
+    }
+
+    @Override
+    public double getSales() {
+        return sales;
+    }
+
+    @Override
+    public double getCommissionRate() {
+        return commissionRate;
     }
 
     @Override
