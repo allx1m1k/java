@@ -1,6 +1,7 @@
 package com.lux.training.lab2.employees;
 
 import com.lux.classes.Playable;
+import com.lux.training.utils.Utils;
 
 /**
  * Created by dima on 10.06.2014.
@@ -25,6 +26,11 @@ public class Payroll {
     //метод определения кол-ва строк в платежной ведомомсти
     public int getPayrollRows(){
         return cnt;
+    }
+
+    //метод получения массива Персон
+    public Person[] getMembers() {
+        return members;
     }
 
     //метод вывода ФИО

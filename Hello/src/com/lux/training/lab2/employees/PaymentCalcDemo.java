@@ -1,6 +1,9 @@
 package com.lux.training.lab2.employees;
 
 import com.lux.training.utils.Date;
+import com.lux.training.utils.Utils;
+
+import java.util.Arrays;
 
 
 /**
@@ -20,8 +23,11 @@ public class PaymentCalcDemo {
         payroll.addEmployee(new EmployeeExtPaybale("Pete", "Petrov", "Manager", "IT dept", new Date(date)));
         payroll.addEmployee(new EmployeeHourlyPaybale("Sidor", "Sidorov", "Accountant", "IT dept", new Date (15, 6, 2010 )));
 
-        // рассчитаем ЗП
+        // рассчитаем ЗП в ведомости
         payroll.pay();
+
+        // отсортируем сотрудников в ведомости
+        Utils.sort(payroll.getMembers(), 0, payroll.getPayrollRows()-1);
 
         // сформируем строки платежной ведомомсти
         for (int i = 0; i < payroll.getPayrollRows(); i++) {
@@ -31,6 +37,7 @@ public class PaymentCalcDemo {
             payroll.getPaymentAtIndex(i); //финаносвые подробности выплаты
             System.out.println("");
         }
+
     }
 
 }
