@@ -1,6 +1,6 @@
 package com.lux.training.lab2.employees;
 
-public class Employee {
+public abstract class Employee {
 	private String lastname;
 	private String firstname;
 	private PositionInfo position;
@@ -29,6 +29,8 @@ public class Employee {
 		return "";
 	}
 	
+	public abstract double calcPayment(); //этот метод абстрактный, т.к. его реализация различна для разных типов
 	
+	public abstract String getType();
 
 }
