@@ -23,6 +23,11 @@ public class Employee {
 	public void setPosition(PositionInfo position) {
 		this.position = position;
 	}
+	public String toString(){
+		System.out.println("First name: " + this.getFirstname());
+		System.out.println("Last name: " + this.getLastname());
+		return "";
+	}
 	
 	
 
