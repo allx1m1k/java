@@ -1,6 +1,6 @@
 package com.lux.classes;
 
-public class Rectangle1 extends Shape implements Measurable {
+public class Rectangle1 extends Shape implements Measurable, Comparable {
 	//в rectangle1 по€вилис все члены Shape т.к. этот класс наследуетс€ от Shape
 	//
 	//первой строчкой всегда идут вызовы конструктора
@@ -42,5 +42,10 @@ public class Rectangle1 extends Shape implements Measurable {
     @Override
     public int getArea() {
         return getHeight() * getWidth();
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return this.getHeight() - ((Rectangle) o).getHeight();
     }
 }

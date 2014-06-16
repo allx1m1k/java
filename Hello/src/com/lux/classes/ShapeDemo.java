@@ -35,6 +35,8 @@ public class ShapeDemo {
         shape2.draw();
         rec1.draw();
         System.out.println("Площадь Rectangle1 rec1 is " + rec1.getArea());
+
+        //Arrays.sort(shapes); //сортировка наших форм, для которых имплементирован интерфейс Comparable
 	}
 
 }
