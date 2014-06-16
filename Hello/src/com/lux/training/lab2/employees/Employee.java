@@ -1,10 +1,13 @@
 package com.lux.training.lab2.employees;
 
+/**
+ *
+ */
 public abstract class Employee {
 	private String lastname;
 	private String firstname;
-	private PositionInfo position;
-	
+	private PositionInfo position; //пример композиции
+
 	public String getLastname() {
 		return lastname;
 	}
@@ -23,7 +26,9 @@ public abstract class Employee {
 	public void setPosition(PositionInfo position) {
 		this.position = position;
 	}
-	public String toString(){
+	//переопределеяем строковое представдение Сотрудника чтобы выводилось текстовое представление
+    //в подклассах будет super.toString + то что наш интересует
+    public String toString(){
 		System.out.println("First name: " + this.getFirstname());
 		System.out.println("Last name: " + this.getLastname());
 		return "";

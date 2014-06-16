@@ -1,5 +1,8 @@
 package com.lux.training.lab2.employees;
 
+/**
+ * В этот класс инкапсулировали информацию о позиции
+ */
 public class PositionInfo {
 	private String name;
 	private String dapartmentName;
