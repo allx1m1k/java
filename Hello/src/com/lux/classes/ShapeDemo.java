@@ -37,6 +37,8 @@ public class ShapeDemo {
         System.out.println("Площадь Rectangle1 rec1 is " + rec1.getArea());
 
         //Arrays.sort(shapes); //сортировка наших форм, для которых имплементирован интерфейс Comparable
+        //метод sort ничего не знает о типах в shapes но за счет динамического полиморфзма (в конкретном типе должен быть реализован метод sort,
+        // иначе получим ClassCastExc) и приведения объектов к интерфейсу Comparable мы можем сортировать любые объекты: Rectangle1, Line1, ...
 	}
 
 }
