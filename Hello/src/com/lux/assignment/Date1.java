@@ -92,6 +92,7 @@ public class Date1 {
 			}
 	//подготовим отформатированную строку
 	dateToPrint = dayToPrint + "." + monthToPrint  + "." + Integer.toString(this.getYear());
+    //(day<10)?"0" + day : day тренарный оператор
 	System.out.println(dateToPrint);
 	}
 	
@@ -111,8 +112,8 @@ public class Date1 {
 	//статический метод monthsCount возвращающий число месяцев прошедших между двумя
 	//датами;
 	public static int compareDates(Date1 d1, Date1 d2) {
-	
-		return d1.getMonth() - d2.getMonth();
+	    //return d1.year*12 + d1.month - d2.year*12 - d2.month;
+		return d1.getMonth() - d2.getMonth(); //разница в месяцах без учета годов
 	
 	}
 }
