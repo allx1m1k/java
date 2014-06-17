@@ -8,8 +8,7 @@ public class PositionInfo {
 	private String dapartmentName;
 	
 	public String toString(){
-		System.out.println("Position: " + getPositionName());	
-		System.out.println("Department: " + getDapartmentName());
+		System.out.println("Position: " + this.getPositionName() + " in department " + this.getDapartmentName() );
 		return "";
 		
 	}
