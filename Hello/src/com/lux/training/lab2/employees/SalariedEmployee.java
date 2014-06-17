@@ -1,9 +1,16 @@
 package com.lux.training.lab2.employees;
 
+import com.lux.training.utils.Date;
+
 public class SalariedEmployee extends Employee {
 	private double salary;
 
-	public double getSalary() {
+    public SalariedEmployee(String lastname, String firstname, PositionInfo position, Date birthday, double salary) {
+        super(lastname, firstname, position, birthday);
+        this.salary = salary;
+    }
+
+    public double getSalary() {
 		return salary;
 	}
 

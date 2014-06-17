@@ -1,10 +1,17 @@
 package com.lux.training.lab2.employees;
 
+import com.lux.training.utils.Date;
+
 /**
  * Created by dima on 16.06.2014.
  */
 public class SalaryMixedEmployee extends ComissionEmployee {
     private double baseSalary;
+
+    public SalaryMixedEmployee(String lastname, String firstname, PositionInfo position, Date birthday, double comission, double salesAmount, double baseSalary) {
+        super(lastname, firstname, position, birthday, comission, salesAmount);
+        this.baseSalary = baseSalary;
+    }
 
     public double getBaseSalary() {
         return baseSalary;

@@ -1,12 +1,18 @@
 package com.lux.training.lab2.employees;
 
+import com.lux.training.utils.Date;
+
 public class HourlyEmployee extends Employee {
 	private int workHours;
 	private double hourlyRate;
-	
-	
-	
-	public int getWorkHours() {
+
+    public HourlyEmployee(String lastname, String firstname, PositionInfo position, Date birthday, int workHours, double hourlyRate) {
+        super(lastname, firstname, position, birthday);
+        this.workHours = workHours;
+        this.hourlyRate = hourlyRate;
+    }
+
+    public int getWorkHours() {
 		return workHours;
 	}
 	public void setWorkHours(int workHours) {

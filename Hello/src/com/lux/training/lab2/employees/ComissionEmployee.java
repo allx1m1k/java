@@ -1,10 +1,18 @@
 package com.lux.training.lab2.employees;
 
+import com.lux.training.utils.Date;
+
 public class ComissionEmployee extends Employee {
 	private double comission;
 	private double salesAmount;
-	
-	public double getComission() {
+
+    public ComissionEmployee(String lastname, String firstname, PositionInfo position, Date birthday, double comission, double salesAmount) {
+        super(lastname, firstname, position, birthday);
+        this.comission = comission;
+        this.salesAmount = salesAmount;
+    }
+
+    public double getComission() {
 		return comission;
 	}
 	public void setComission(double comission) {

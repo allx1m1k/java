@@ -1,5 +1,7 @@
 package com.lux.training.lab2.employees;
 
+import com.lux.training.utils.Date;
+
 /**
  *
  */
@@ -7,8 +9,16 @@ public abstract class Employee {
 	private String lastname;
 	private String firstname;
 	private PositionInfo position; //пример композиции
+    private Date birthday;
 
-	public String getLastname() {
+    public Employee(String lastname, String firstname, PositionInfo position, Date birthday) {
+        this.lastname = lastname;
+        this.firstname = firstname;
+        this.position = position;
+        this.birthday = birthday;
+    }
+
+    public String getLastname() {
 		return lastname;
 	}
 	public void setLastname(String lastname) {
