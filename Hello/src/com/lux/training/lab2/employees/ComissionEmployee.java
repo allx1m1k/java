@@ -19,15 +19,18 @@ public class ComissionEmployee extends Employee {
 	@Override
 	public double calcPayment() {
 		// TODO Auto-generated method stub
-		return 0;
+		return salesAmount * comission/100; //рассчитаем выплату
 	}
 	@Override
 	public String getType() {
 		// TODO Auto-generated method stub
 		return "comission";
 	}
-	
-	
-	
-
+    @Override
+    public String toString() {
+        System.out.println("Sales amount: " + this.getSalesAmount());
+        System.out.println("Commission: " + this.getComission());
+        System.out.println("Payment: " + this.calcPayment());
+        return "";
+    }
 }

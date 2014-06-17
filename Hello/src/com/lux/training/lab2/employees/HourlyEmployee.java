@@ -21,14 +21,21 @@ public class HourlyEmployee extends Employee {
 	@Override
 	public double calcPayment() {
 		// TODO Auto-generated method stub
-		return 0;
+		return workHours * hourlyRate;
 	}
 	@Override
 	public String getType() {
 		// TODO Auto-generated method stub
 		return "hourly rate";
 	}
-	
-	
+    @Override
+    public String toString() {
+        System.out.println("Working hours: " + this.getWorkHours());
+        System.out.println("Hourly rate: " + this.getHourlyRate());
+        System.out.println("Payment: " + this.calcPayment());
+        return "";
+    }
+
+
 
 }

@@ -14,7 +14,7 @@ public class SalariedEmployee extends Employee {
 	@Override
 	public double calcPayment() {
 		// TODO Auto-generated method stub
-		return 0;
+		return salary;
 	}
 
 	@Override
