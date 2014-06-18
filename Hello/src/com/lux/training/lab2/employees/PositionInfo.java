@@ -12,7 +12,11 @@ public class PositionInfo {
 		return "";
 		
 	}
-	
+
+    PositionInfo(String aName, String aDapartmentName){
+        name = aName;
+        dapartmentName = aDapartmentName;
+    }
 	
 	public String getPositionName() {
 		return name;
