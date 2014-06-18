@@ -4,6 +4,7 @@ import com.lux.training.utils.Date;
 
 public class SalariedEmployee extends Employee {
 	private double salary;
+    private int period;
 
     public SalariedEmployee(String lastname, String firstname, PositionInfo position, Date birthday, double salary) {
         super(lastname, firstname, position, birthday);
@@ -18,10 +19,18 @@ public class SalariedEmployee extends Employee {
 		this.salary = salary;
 	}
 
-	@Override
+    public int getPeriod() {
+        return period;
+    }
+
+    public void setPeriod(int period) {
+        this.period = period;
+    }
+
+    @Override
 	public double calcPayment() {
 		// TODO Auto-generated method stub
-		return salary;
+		return salary * period;
 	}
 
 	@Override
@@ -29,7 +38,12 @@ public class SalariedEmployee extends Employee {
 		// TODO Auto-generated method stub
 		return "monthly salary";
 	}
-	
-	
 
+    @Override
+    public String toString() {
+        System.out.println("Salary: " + this.getSalary());
+        System.out.println("Payment: " + this.calcPayment());
+        return "";
+
+    }
 }
