@@ -30,4 +30,14 @@ public class SalaryMixedEmployee extends ComissionEmployee {
     public double calcPayment() {
         return super.calcPayment() + this.getBaseSalary() ;
     }
+
+    @Override
+    public String toString() {
+        System.out.println("Sales amount: " + this.getSalesAmount());
+        System.out.println("Commission: " + this.getCommission());
+        System.out.println("Base salary: " + this.getBaseSalary());
+        System.out.println("Payment: " + this.calcPayment());
+        return "";
+        //return super.toString();
+    }
 }

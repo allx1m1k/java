@@ -3,20 +3,20 @@ package com.lux.training.lab2.employees;
 import com.lux.training.utils.Date;
 
 public class ComissionEmployee extends Employee {
-	private double comission;
+	private double commission;
 	private double salesAmount;
 
-    public ComissionEmployee(String lastname, String firstname, PositionInfo position, Date birthday, double comission, double salesAmount) {
+    public ComissionEmployee(String lastname, String firstname, PositionInfo position, Date birthday, double commission, double salesAmount) {
         super(lastname, firstname, position, birthday);
-        this.comission = comission;
+        this.commission = commission;
         this.salesAmount = salesAmount;
     }
 
-    public double getComission() {
-		return comission;
+    public double getCommission() {
+		return commission;
 	}
-	public void setComission(double comission) {
-		this.comission = comission;
+	public void setCommission(double commission) {
+		this.commission = commission;
 	}
 	public double getSalesAmount() {
 		return salesAmount;
@@ -27,17 +27,17 @@ public class ComissionEmployee extends Employee {
 	@Override
 	public double calcPayment() {
 		// TODO Auto-generated method stub
-		return salesAmount * comission/100; //рассчитаем выплату
+		return salesAmount * commission /100; //рассчитаем выплату
 	}
 	@Override
 	public String getType() {
 		// TODO Auto-generated method stub
-		return "comission";
+		return "commission";
 	}
     @Override
     public String toString() {
         System.out.println("Sales amount: " + this.getSalesAmount());
-        System.out.println("Commission: " + this.getComission());
+        System.out.println("Commission: " + this.getCommission());
         System.out.println("Payment: " + this.calcPayment());
         return "";
     }
