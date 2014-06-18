@@ -10,11 +10,15 @@ public class NewPaymentCalcDemo {
 
         Employee[] payroll;
         double cash;
-        payroll = new Employee[]{new ComissionEmployee("Ivanov", "Ivan", new PositionInfo("Engineer", "IT Dept"), new Date(14, 06, 1976), 12, 10000)};
+        payroll = new Employee[]{
+                new ComissionEmployee("Ivanov", "Ivan", new PositionInfo("Engineer", "IT Dept"), new Date(14, 06, 1976), 12, 10000),
+                new HourlyEmployee("Petrov", "Petr", new PositionInfo("Tester", "IT Dept"), new Date(18, 06, 1981), 120, 10.00)
+        };
 
         for (Employee person : payroll){
             person.calcPayment();
             person.toString();
+            System.out.println("");
         }
 
 

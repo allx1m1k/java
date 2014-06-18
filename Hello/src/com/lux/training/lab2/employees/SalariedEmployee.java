@@ -41,6 +41,8 @@ public class SalariedEmployee extends Employee {
 
     @Override
     public String toString() {
+        super.toString(); //вызываем метод супер-класса для печати общей информации
+        System.out.println("Payment type: " + this.getType());
         System.out.println("Salary: " + this.getSalary());
         System.out.println("Payment: " + this.calcPayment());
         return "";

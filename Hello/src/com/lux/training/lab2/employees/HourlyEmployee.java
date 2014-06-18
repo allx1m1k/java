@@ -36,6 +36,8 @@ public class HourlyEmployee extends Employee {
 	}
     @Override
     public String toString() {
+        super.toString(); //вызываем метод супер-класса для печати общей информации
+        System.out.println("Payment type: " + this.getType());
         System.out.println("Working hours: " + this.getWorkHours());
         System.out.println("Hourly rate: " + this.getHourlyRate());
         System.out.println("Payment: " + this.calcPayment());
