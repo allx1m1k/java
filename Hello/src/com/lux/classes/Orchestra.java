@@ -24,6 +24,23 @@ public class Orchestra {
         //numbers[cnt++] = instrument;
         members[cnt++] = instrument;
      }
+
+    public Playable[] getMembers() {
+        return members;
+    }
+
+    public void setMembers(Playable[] members) {
+        this.members = members;
+    }
+
+    public int getCnt() {
+        return cnt;
+    }
+
+    public void setCnt(int cnt) {
+        this.cnt = cnt;
+    }
+
     //метод играть
     public void play(){
         for (Playable instrument: members) {
