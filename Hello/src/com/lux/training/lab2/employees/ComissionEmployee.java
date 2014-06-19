@@ -36,10 +36,13 @@ public class ComissionEmployee extends Employee {
     @Override
     public String toString() {
         super.toString(); //вызываем метод супер-класса для печати общей информации
-        System.out.println("Payment type: " + this.getType());
-        System.out.println("Sales amount: " + this.getSalesAmount());
-        System.out.println("Commission: " + this.getCommission());
-        System.out.println("Payment: " + this.calcPayment());
+        //распечатаем строки только для объектов типа ComissionEmployee
+        if (this.getType() == "commission") {
+            System.out.println("Payment type: " + this.getType());
+            System.out.println("Sales amount: " + this.getSalesAmount());
+            System.out.println("Commission: " + this.getCommission());
+            System.out.println("Payment: " + this.calcPayment());
+        }
         return "";
     }
 }

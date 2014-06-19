@@ -9,6 +9,7 @@ public class SalariedEmployee extends Employee {
     public SalariedEmployee(String lastname, String firstname, PositionInfo position, Date birthday, double salary) {
         super(lastname, firstname, position, birthday);
         this.salary = salary;
+        this.period = 1; //инициализируем атрибут значением месяцев работы по умолчанию
     }
 
     public double getSalary() {
