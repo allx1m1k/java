@@ -46,6 +46,6 @@ public class Rectangle1 extends Shape implements Measurable, Comparable {
 
     @Override
     public int compareTo(Object o) {
-        return this.getHeight() - ((Rectangle) o).getHeight();
+        return this.getHeight() - ((Rectangle1) o).getHeight();
     }
 }
