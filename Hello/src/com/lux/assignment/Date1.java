@@ -6,7 +6,7 @@ package com.lux.assignment;
 *
 **/
 
-public class Date1 {
+public class Date1 implements Comparable {
 	private int day;
 	private int month;
 	private int year;
@@ -116,4 +116,11 @@ public class Date1 {
 		return d1.getMonth() - d2.getMonth(); //разница в месяцах без учета годов
 	
 	}
+
+    //переопределенный метод для сравнения двух дат на основе дня
+    @Override
+    public int compareTo(Object o) {
+        //return 0;
+        return this.getDay() - ((Date1) o).getDay();
+    }
 }
