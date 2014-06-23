@@ -60,9 +60,10 @@ public class MyQuickSortObjects {
 
         System.out.println("Unsorted array is " + Arrays.toString(myDates));
 
-        for (Date1 dates: myDates) {
+        /**for (Date1 dates: myDates) {
             myDates[dates].printDate();
         }
+         */
 
 
         //System.out.println("Sorted array is " + Arrays.toString(quickSort(values, lowIndex, highIndex)));
