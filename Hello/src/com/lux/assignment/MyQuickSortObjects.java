@@ -48,22 +48,28 @@ public class MyQuickSortObjects {
     public static void main(String[] args) {
         //создадим массив с объектами типа Date1
         Date1[] myDates = new Date1[]{
-                new Date1(7, 8, 1976),
+                new Date1(17, 12, 1957),
+        		new Date1(7, 8, 1976),
                 new Date1(4, 9, 2010),
-                new Date1(29, 1, 1980)
+                new Date1(29, 1, 1980),
+                new Date1(12, 6, 1999)
         };
 
         int lowIndex = 0; //индекс первого элемента
         int highIndex = myDates.length - 1; //индекс последнего эл-та
         int a; //temp
 
-
+        /**
         System.out.println("Unsorted array is " + Arrays.toString(myDates));
+        System.out.print("Date1: ");
+        myDates[0].printDate();
+        */
 
-        /**for (Date1 dates: myDates) {
-            myDates[dates].printDate();
+        System.out.println("Unsorted array below: ");
+        for (Date1 dates: myDates) {
+            dates.printDate();
         }
-         */
+        
 
 
         //System.out.println("Sorted array is " + Arrays.toString(quickSort(values, lowIndex, highIndex)));
