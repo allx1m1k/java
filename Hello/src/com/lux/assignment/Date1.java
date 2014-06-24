@@ -120,7 +120,7 @@ public class Date1 implements Comparable {
     //переопределенный метод для сравнения двух дат на основе дня
     @Override
     public int compareTo(Object o) {
-        //return 0;
+        //сравниваем атрибут Day объекта и атрибут Day аргумента
         return this.getDay() - ((Date1) o).getDay();
     }
 }

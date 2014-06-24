@@ -6,12 +6,7 @@ import java.util.Arrays;
  * http://echuprina.blogspot.com/2012/02/comparable-comparator.html - Сортировка и упорядочивание: Comparable
  */
 public class MyQuickSortObjects {
-/**
-    //массив
-    private Object[] members;
-    //счетчик кол-ва отрудников в ведомости
-    private int cnt;
- **/
+
     public static Date1[] objectsQuickSort(Date1[] massiv, int start, int end) {
         if (start >= end) return massiv; //прекратим выполнение если индекс с левой стороны больше либо равен индексу с правой стороны
         int i = start;
@@ -20,12 +15,7 @@ public class MyQuickSortObjects {
         int middle = (i + j)/2;
 
         while (i < j) {
-            //while ((i < middle) && (massiv[i] <= massiv[middle]))
-
             while ((i < middle) && (massiv[i].compareTo(massiv[middle]) < 0 )) i++; //перемещаем бегунок с левого края до середины проверяя значения элементов и индекс бегунка
-
-            //while ((j > middle) && (massiv[j] >= massiv[middle]))
-
             while ((j > middle) && (massiv[j].compareTo(massiv[middle]) > 0 )) j--; //перемещаем бегунок с правого края до середины проверяя значения элементов и индекс бегунка
 
         if (i < j) {
@@ -73,7 +63,7 @@ public class MyQuickSortObjects {
         
         MyQuickSortObjects.objectsQuickSort(myDates, lowIndex, highIndex);
 
-        System.out.println("Sorted array below: ");
+        System.out.println("Sorted within Day array below: ");
         for (Date1 dates: myDates) {
             dates.printDate();
         };
