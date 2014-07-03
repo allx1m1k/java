@@ -9,10 +9,17 @@ import java.io.InputStream;
  * Created by dima on 27.06.2014.
  */
 public class Class9 {
-    /**private InputStream is;
+    private InputStream is;
 
-    {
-        is = new FileInputStream("D:\\PUB\\GoogleDrive\\JAVA\\test.txt");
+    /**
+     * Пример throws
+     * @param args
+     * @throws IOException
+     */
+    public static void main(String[] args) throws IOException {
+        InputStream is = new FileInputStream("D:\\PUB\\GoogleDrive\\JAVA\\test.txt");
     }
-    */
+
+
+
 }
