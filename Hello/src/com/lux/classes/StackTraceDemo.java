@@ -1,23 +1,27 @@
 package com.lux.classes;
 
-/**
- * Created by dima on 6/19/2014.
- */
 public class StackTraceDemo {
 
-    public static void methodA(){
-        methodB();
-    }
 
-    private static void methodB() {
-        methodC();
+	public static void methodA() {
+		methodB();
+	}
 
-    }
-    private static int methodC() {
-        return 10/0;
-    }
+	public static void methodB() {
+		methodC();
+	}
 
-    public static void main(String[] args) {
-        StackTraceDemo.methodA();
-    }
+	public static void methodC() {
+		methodD();
+	}
+
+	public static void methodD() {
+		int i = 10/0;
+	}
+	
+	
+	public static void main(String[] args) {
+		methodA();
+	}
+
 }
