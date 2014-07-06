@@ -72,7 +72,7 @@ public class Invoice implements NewPayable {
 
     public String toString() {
         System.out.println("Invoice number: " + getInvoiceNumber() );
-        System.out.println("Invoice date: " + getInvoiceDate());
+        System.out.println("Invoice date: " + getInvoiceDate().printDate1());
         System.out.print("Invoice item: " + getItem());
         System.out.print("  ");
         System.out.print("Item prize: " + getItemPrize());
