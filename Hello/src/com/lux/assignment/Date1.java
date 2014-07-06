@@ -71,8 +71,7 @@ public class Date1 implements Comparable {
 			this.year = aYear;
 	}
 	
-	//метод printDate возвращающий значение даты в виде строки формата dd.mm.yyyy (например:
-	//03.02.2004);
+
 	public void printDate() {
 	String dateToPrint = new String();
 	String dayToPrint = new String();
@@ -95,8 +94,34 @@ public class Date1 implements Comparable {
     //(day<10)?"0" + day : day тренарный оператор
 	System.out.println(dateToPrint);
 	}
-	
-	
+
+
+    //метод printDate возвращающий значение даты в виде строки формата dd.mm.yyyy (например:
+    //03.02.2004);
+    public String  printDate1() {
+        String dateToPrint = new String();
+        String dayToPrint = new String();
+        String monthToPrint = new String();
+        //отформатируем значения менее 10 (1 .. 9) в (01 ..09)
+        if (this.getDay() < 10) {
+            dayToPrint = "0" + this.getDay();
+        }
+        else {
+            dayToPrint = Integer.toString(this.getDay());
+        }
+        if (this.getMonth() < 10) {
+            monthToPrint = "0" + this.getMonth();
+        }
+        else {
+            monthToPrint = Integer.toString(this.getMonth());
+        }
+        //подготовим отформатированную строку
+        dateToPrint = dayToPrint + "." + monthToPrint  + "." + Integer.toString(this.getYear());
+        //(day<10)?"0" + day : day тренарный оператор
+        return dateToPrint;
+    }
+
+
 	//методы incDay – увеличивает дату на заданное число дней и decDay – уменьшает дату на
 	//заданное число дней;
 	public void incDay(int d) {
