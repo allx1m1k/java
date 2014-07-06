@@ -5,7 +5,7 @@ import com.lux.assignment.Date1;
 /**
  * Created by dima on 7/6/2014.
  */
-public class Invoice {
+public class Invoice implements NewPayable {
     private int invoiceNumber; //номер инвойса
     private Date1 invoiceDate;
     private String item; //строка инвойса
@@ -68,5 +68,24 @@ public class Invoice {
 
     public void setTotal(double total) {
         this.total = total;
+    }
+
+    public String toString() {
+        System.out.println("Invoice number: " + getInvoiceNumber() );
+        System.out.println("Invoice date: " + getInvoiceDate());
+        System.out.print("Invoice item: " + getItem());
+        System.out.print("  ");
+        System.out.print("Item prize: " + getItemPrize());
+        System.out.print("  ");
+        System.out.print("Item quantity: " + getItemQuantity());
+        System.out.print("  ");
+        System.out.println("Invoice total: " + getTotal());
+        return "";
+    }
+
+    @Override
+    public double calcPayment() {
+        total = itemPrize * itemQuantity;
+        return total;
     }
 }

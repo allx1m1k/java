@@ -5,7 +5,7 @@ import com.lux.training.utils.Date;
 /**
  *
  */
-public abstract class Employee {
+public abstract class Employee implements NewPayable {
 	private String lastname;
 	private String firstname;
 	private PositionInfo position; //пример композиции
