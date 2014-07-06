@@ -8,9 +8,10 @@ import java.util.Arrays;
 public class TryWithDemo {
 	
 	
-/**
+/*
 	public static String getTextFromFile(String path) throws FileNotFoundException, IOException {
-		try(
+
+        try(
 			FileReader fs = new FileReader(path);
 				TestResource ts = new TestResource();
 		)	
@@ -23,11 +24,12 @@ public class TryWithDemo {
 
         return null;
 	}
+
 	
 	public static void main(String[] args) {
 		System.out.println(getTextFromFile("e:/test.txt"));				
 	}
 
- **/
 
+*/
 }
