@@ -1,11 +1,5 @@
 package com.lux.assignment;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Arrays;
-
 
 /**
  * Created by dima on 7/8/2014.
@@ -16,14 +10,15 @@ public class BoyNamesDemo {
     public static void main(String[] args)  {
         Object[]names = new Object[5];
         String line = null; //строка из файла
-        int i = 0;
-        int j = 0;
 
-        BoyNames aBoys;
-        aBoys = new BoyNames(5);
+
+        BoyNameList aBoys;
+        aBoys = new BoyNameList(5);
         aBoys.readNamesFromFile("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\boynames.txt");
 
-        //System.out.println(Arrays.toString(aBoys));
+        System.out.println(aBoys.toPrint());
+
+
 
 /*
         //try - this block
