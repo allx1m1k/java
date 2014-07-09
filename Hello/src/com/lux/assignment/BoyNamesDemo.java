@@ -2,7 +2,7 @@ package com.lux.assignment;
 
 
 /**
- * Created by dima on 7/8/2014.
+ * Created by dima on 7/9/2014.
  * How to split string http://stackoverflow.com/questions/3481828/how-to-split-a-string-in-java
  */
 public class BoyNamesDemo {
