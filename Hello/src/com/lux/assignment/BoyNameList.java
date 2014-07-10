@@ -27,7 +27,7 @@ public class BoyNameList {
         names[cnt++] = aBoyName;
     }
 
-    //метод получения массива имен
+    //метод получения массива ссылок на типы BoyNAme
     public BoyName[] getNames() {
         return names;
     }
@@ -45,6 +45,10 @@ public class BoyNameList {
      * метод генерации строки для печати
      * @return
      */
+    public BoyName getNameAt(int i) {
+        return names[i];
+    }
+
     public String toPrint() {
         int i = 0;
         String result = "";
@@ -55,6 +59,26 @@ public class BoyNameList {
         return result;
         }
 
+    /**
+     * метод поиска имени String boyName в списке
+     * возвращает int >= 0 если имя String boyName есть в списке
+     * в противном случае - возвращает отрицательное значение
+     * @param boyName
+     * @return
+     */
+    public int searchBoyName(String boyName) {
+        /*boolean result = false;
+        if (Arrays.binarySearch((BoyName[])this.getNames(), (String)boyName) >= 0) {
+            result = true;
+        } else {
+            result = false;
+        }
+
+        return result;
+        */
+        //return Arrays.binarySearch(this.getNames(), boyName);
+        return Arrays.binarySearch(this.getNames(), (String) boyName);
+    }
 
     /**
      * метод чтения имен и частотностей из файла

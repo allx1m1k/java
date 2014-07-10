@@ -46,6 +46,11 @@ public class BoyNamesDemo {
         BoyName newBoyName = BoyNamesDemo.inputBoyName();
         System.out.println("");
         System.out.println("New boy name has been entered by user is: " + newBoyName.getBoyName());
+        System.out.println("");
+        System.out.println(aBoys.searchBoyName(newBoyName.getBoyName()));
+
+        int index = aBoys.searchBoyName(newBoyName.getBoyName());
+        System.out.println("Freq of found name is: " + aBoys.getNameAt(index).getNameFreq());
 
 
 
