@@ -49,6 +49,11 @@ public class BoyNameList {
         return names[i];
     }
 
+    /**
+     * Метод печати имен и частотностей
+     * пробегает не по массиву String[][] newNames, а по массиву Boyname[] names
+     * @return
+     */
     public String toPrint() {
         int i = 0;
         String result = "";
@@ -58,8 +63,8 @@ public class BoyNameList {
         }
         return result;
         }
-
     /**
+     * НЕ РАБОТАЕТ КОРРЕКТНО - НАДО ЕЩЕ ДУМАТЬ
      * метод поиска имени String boyName в списке
      * возвращает int >= 0 если имя String boyName есть в списке
      * в противном случае - возвращает отрицательное значение
@@ -67,16 +72,6 @@ public class BoyNameList {
      * @return
      */
     public int searchBoyName(String boyName) {
-        /*boolean result = false;
-        if (Arrays.binarySearch((BoyName[])this.getNames(), (String)boyName) >= 0) {
-            result = true;
-        } else {
-            result = false;
-        }
-
-        return result;
-        */
-        //return Arrays.binarySearch(this.getNames(), boyName);
         return Arrays.binarySearch(this.getNames(), (String) boyName);
     }
 
@@ -86,19 +81,16 @@ public class BoyNameList {
      */
     public void readNamesFromFile(String path){
         String line = null; //строка из файла
-        //String[][] temp = new String[5][5];
         Object[][] temp = new Object[5][5];
         int i = 0;
-
         //try - this block
         try (
                 BufferedReader br = new BufferedReader(new FileReader(path));
-
         ) {
             //String line;
             //считываем построчно пока не достигли последней строки
             while ((line = br.readLine()) != null) {
-                System.out.println(line);
+                //System.out.println(line);
                 //names[i] = new BoyName(line, 0);
                 temp[i] = line.split("[ \t]");
                 names[i] = new BoyName((String) temp[i][0], (String) temp[i][1]);
@@ -108,7 +100,7 @@ public class BoyNameList {
                 //сохраним в массив частотность
                 newNames[i][1] = temp[i][1];
                 //names = line.split(" ");
-                System.out.println("newName0 Name: " + newNames[i][0] + "  " + " NewName0 Freq: " + newNames[i][1]);
+                //System.out.println("newName0 Name: " + newNames[i][0] + "  " + " NewName0 Freq: " + newNames[i][1]);
                 i++;
                 this.cnt ++;
 
@@ -116,11 +108,6 @@ public class BoyNameList {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        System.out.println(Arrays.toString(temp));
-
+        //System.out.println(Arrays.toString(temp));
     }
-
-
-
 }
