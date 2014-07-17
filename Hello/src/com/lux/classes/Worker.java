@@ -3,11 +3,7 @@ package com.lux.classes;
 /**
  * Created by dima on 7/14/2014.
  */
-public class Worker {
+public interface Worker {
 
-    public void work(){
-
-    }
-
-
+    public void work();
 }
