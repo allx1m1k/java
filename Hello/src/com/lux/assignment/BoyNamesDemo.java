@@ -36,9 +36,10 @@ public class BoyNamesDemo {
         String line = null; //строка из файла
         BoyNameList aBoys; //список имен
         aBoys = new BoyNameList(5);
-        aBoys.readNamesFromFile("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\boynames.txt");
+        //aBoys.readNamesFromFile("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\boynames.txt");
+        aBoys.readNamesFromFileTo2DArray("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\boynames.txt");
         //выведем список aBoys
-        System.out.println(aBoys.toPrint());
+        //System.out.println(aBoys.toPrint());
         //запросим ввод имени
         String newBoyName = BoyNamesDemo.inputBoyName();
         //создадим экземпляр BoyName из введенной строки

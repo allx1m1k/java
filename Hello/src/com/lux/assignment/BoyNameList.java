@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class BoyNameList {
     //чтобы хранить список имен
     private BoyName names[]; //массив типа BoyName
-    private Object newNames[][] = new String[5][5]; //двумерный массив как описано в задаче lab3.pdf
+    private String newNames[][] = new String[2][1000]; //двумерный массив как описано в задаче lab3.pdf
     //счетчик кол-ва имен в списке
     private int cnt; //количество имен в списке
 
@@ -76,12 +76,39 @@ public class BoyNameList {
     }
 
     /**
+     * Метод чтения имен и частотностей из файла в 2D массив
+     * @param path
+     */
+    public void readNamesFromFileTo2DArray(String path) {
+        String line = null; //строка из файла
+        String[] temp = new String[1000];
+        int i = 0;
+        try (
+                BufferedReader br = new BufferedReader(new FileReader(path));
+        ) {
+            while ((line = br.readLine()) != null) {
+                temp = line.split("[ \t]");
+                //сохраняем имена temp[0] и частотности temp[1] в массиве BoyName
+                names[i] = new BoyName(temp[0],temp[1]);
+                //сохраняем имена temp[0] в каждом элементе нулевой строки 2D массива - элемент имен
+                newNames[0][i] = temp[0];
+                //сохраняем частотности temp[1] в каждом элементе первой строки 2D массива - элемент частотностей
+                newNames[1][i] = temp[1];
+                //увеличиваем счетчик массива BoyName на 1 - двигаемся по ячейкам
+                i++;
+                this.cnt ++;
+            }
+        } catch (IOException e) {
+            e.getMessage();
+        }
+    }
+    /**
      * метод чтения имен и частотностей из файла
       * @param path
      */
     public void readNamesFromFile(String path){
         String line = null; //строка из файла
-        Object[][] temp = new Object[5][5];
+        String[][] temp = new String[2][1000];
         int i = 0;
         //try - this block
         try (
@@ -93,6 +120,7 @@ public class BoyNameList {
                 //System.out.println(line);
                 //names[i] = new BoyName(line, 0);
                 temp[i] = line.split("[ \t]");
+                //сохраняем имена и частотности в массиве BoyName
                 names[i] = new BoyName((String) temp[i][0], (String) temp[i][1]);
                 //System.out.println("Temp0 Name: " + temp[i][0] + "  " + " Temp0 Freq: " + temp[i][1]);
                 //сохраним в массив имя
@@ -103,7 +131,6 @@ public class BoyNameList {
                 //System.out.println("newName0 Name: " + newNames[i][0] + "  " + " NewName0 Freq: " + newNames[i][1]);
                 i++;
                 this.cnt ++;
-
             }
         } catch (IOException e) {
             e.printStackTrace();
