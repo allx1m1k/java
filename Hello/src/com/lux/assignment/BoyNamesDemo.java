@@ -32,10 +32,10 @@ public class BoyNamesDemo {
 
     }
     public static void main(String[] args) throws BoyNameNotFoundException {
-        Object[]names = new Object[5];
+        Object[]names = new Object[6];
         String line = null; //строка из файла
         BoyNameList aBoys; //список имен
-        aBoys = new BoyNameList(5);
+        aBoys = new BoyNameList(6);
         //aBoys.readNamesFromFile("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\boynames.txt");
         aBoys.readNamesFromFileTo2DArray("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\boynames.txt");
         //выведем список aBoys
