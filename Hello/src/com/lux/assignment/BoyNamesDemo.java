@@ -40,6 +40,10 @@ public class BoyNamesDemo {
         aBoys.readNamesFromFileTo2DArray("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\boynames.txt");
         //выведем список aBoys
         System.out.println(aBoys.toPrintFrom2DArray());
+        //сортировка по имени
+        aBoys.sortByNames();
+        System.out.println("Sorting...");
+        System.out.println(aBoys.toPrintFrom2DArray());
         //System.out.println(aBoys.toPrint());
         //запросим ввод имени
         String newBoyName = BoyNamesDemo.inputBoyName();

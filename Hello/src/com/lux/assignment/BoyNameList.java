@@ -78,6 +78,35 @@ public class BoyNameList {
         }
         return result;
     }
+    public void sortByNames(){
+        String [][] result = new String [2][1000];
+        String tempName = "";
+        String tempFreq;
+        //цикл по i-му элементу массива с которым будем сравнивать
+        for (int index = 0 ; index <= this.newNames[0].length - 1; index++) {
+            //цикл по i + 1 элементу массива который будем сравнивать с i-ым элементом
+            for (int next = index + 1; next <= this.newNames[0].length - 1; next++) {
+                //выполняем сортировку только если значение текущей ячейки и значение следующей ячейки не равно null
+                if ((newNames[0][index] != null) & (newNames[0][next] != null)) {
+                    //если i-ый элемент больше либо равен с i-ым + 1 (следующим) за ним, поменяем их местами
+                    if (this.newNames[0][index].compareTo(this.newNames[0][next]) < 0) {
+                        //if (this.newNames[0][index] >= this.newNames[0][next]) {
+                        //сохраним имя и частотность во временные переменные
+                        tempName = new String(this.newNames[0][next]);
+                        tempFreq = new String(this.newNames[1][next]);
+                        //
+                        this.newNames[0][next] = this.newNames[0][index];
+                        this.newNames[1][next] = this.newNames[1][index];
+                        //
+                        this.newNames[0][index] = tempName;
+                        this.newNames[1][index] = tempFreq;
+                    }
+                }
+            }
+        }
+        result = this.newNames.clone();
+        this.newNames = result;
+        }
     /**
      * НЕ РАБОТАЕТ КОРРЕКТНО - НАДО ЕЩЕ ДУМАТЬ
      * метод поиска имени String boyName в списке
