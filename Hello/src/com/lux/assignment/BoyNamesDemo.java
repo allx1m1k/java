@@ -39,6 +39,7 @@ public class BoyNamesDemo {
         //aBoys.readNamesFromFile("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\boynames.txt");
         aBoys.readNamesFromFileTo2DArray("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\boynames.txt");
         //выведем список aBoys
+        System.out.println(aBoys.toPrintFrom2DArray());
         //System.out.println(aBoys.toPrint());
         //запросим ввод имени
         String newBoyName = BoyNamesDemo.inputBoyName();

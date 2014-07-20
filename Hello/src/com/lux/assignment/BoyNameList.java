@@ -50,7 +50,7 @@ public class BoyNameList {
     }
 
     /**
-     * Метод печати имен и частотностей
+     * Метод печати имен и частотностей из массива типов BoyName names
      * пробегает не по массиву String[][] newNames, а по массиву Boyname[] names
      * @return
      */
@@ -62,7 +62,22 @@ public class BoyNameList {
             i++;
         }
         return result;
+    }
+
+    /**
+     * Метод печати имен и частотностей из 2D массива newNames
+     * пробегает по массиву String[][] newNames
+     * @return
+     */
+    public String toPrintFrom2DArray() {
+        int i = 0;
+        String result = "";
+        while (newNames[0][i] != null) {
+            result += "Boy name: " + newNames[0][i] + "   " + " Name frequency: " + newNames[1][i] + "\r\n";
+            i++;
         }
+        return result;
+    }
     /**
      * НЕ РАБОТАЕТ КОРРЕКТНО - НАДО ЕЩЕ ДУМАТЬ
      * метод поиска имени String boyName в списке
