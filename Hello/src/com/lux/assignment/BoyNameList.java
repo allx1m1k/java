@@ -89,7 +89,9 @@ public class BoyNameList {
                 //выполняем сортировку только если значение текущей ячейки и значение следующей ячейки не равно null
                 if ((newNames[0][index] != null) & (newNames[0][next] != null)) {
                     //если i-ый элемент больше либо равен с i-ым + 1 (следующим) за ним, поменяем их местами
-                    if (this.newNames[0][index].compareTo(this.newNames[0][next]) < 0) {
+                    // (this.newNames[0][index].compareTo(this.newNames[0][next]) < 0) Fred , Elton, Dennis, Can, Allan в обратном порядке
+                    // (this.newNames[0][index].compareTo(this.newNames[0][next]) > 0) Allan, Can, Dennis, Elton, Fred в прямом порядке
+                    if (this.newNames[0][index].compareTo(this.newNames[0][next]) > 0) {
                         //if (this.newNames[0][index] >= this.newNames[0][next]) {
                         //сохраним имя и частотность во временные переменные
                         tempName = new String(this.newNames[0][next]);
