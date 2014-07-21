@@ -68,6 +68,15 @@ public class BoyNameList {
     }
 
     /**
+     * вывод кол-ва регистраций имени по индексу
+     * @param aIndex
+     * @return кол-во регистраций (частотность) из 2D массива newNames[1][aIndex]
+     */
+    public String getFreqFrom2DArrayAtIndex (int aIndex) {
+        return newNames[1][aIndex];
+    }
+
+    /**
      * Метод печати имен и частотностей из массива типов BoyName names
      * пробегает не по массиву String[][] newNames, а по массиву Boyname[] names
      * @return
