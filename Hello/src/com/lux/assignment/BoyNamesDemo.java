@@ -33,10 +33,10 @@ public class BoyNamesDemo {
 
     }
     public static void main(String[] args) throws BoyNameNotFoundException {
-        Object[]names = new Object[6];
+        Object[]names = new Object[8];
         String line = null; //строка из файла
         BoyNameList aBoys; //список имен
-        aBoys = new BoyNameList(6);
+        aBoys = new BoyNameList(8);
         //aBoys.readNamesFromFile("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\boynames.txt");
         aBoys.readNamesFromFileTo2DArray("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\boynames.txt");
         //выведем список aBoys
@@ -58,10 +58,12 @@ public class BoyNamesDemo {
         //System.out.println(aBoys.searchBoyName(newBoy.getBoyName()));
 
         //выполним поиск используя статический метод Arrays.binarySearch(Object[] a, Object key)
-        System.out.println("Index of newBoy.getBoyName() in aBoys.getNames() is: " + Arrays.binarySearch(aBoys.getNewNames(), newBoy.getBoyName()));
+        //работает корректно за счет того что метод getNewNames() возвращает коллекцию String которую приводим к массиву методом toArray()
+        System.out.println("Size: " + aBoys.getNewNames().size());
+        System.out.println("Index of newBoy.getBoyName() in aBoys.getNames() is: " + Arrays.binarySearch(aBoys.getNewNames().toArray(), newBoy.getBoyName()));
 
         //для отладки выведем индекс искомого имени в списке
-        int index = aBoys.searchBoyName(newBoy.getBoyName());
-        System.out.println("Freq of found name is: " + aBoys.getNameAt(index).getNameFreq());
+        //int index = aBoys.searchBoyName(newBoy.getBoyName());
+        //System.out.println("Freq of found name is: " + aBoys.getNameAt(index).getNameFreq());
     }
 }

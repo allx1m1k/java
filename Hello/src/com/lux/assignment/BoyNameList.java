@@ -1,9 +1,13 @@
 package com.lux.assignment;
 
+import com.lux.classes.Student;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * dima
@@ -31,9 +35,19 @@ public class BoyNameList {
     public BoyName[] getNames() {
         return names;
     }
-    //метод получения массива имен из 2D массива newNames
-    public String [] getNewNames() {
-        return this.newNames[0];
+    /**
+     * метод получения Коллекции имен длиной только до заполненных ячеек из 2D массива newNames длиной 1000
+     * @return
+     */
+    public List<String> getNewNames() {
+        int i = 0;
+        List<String> newArray = new ArrayList<>();
+        while (newNames[0][i] != null) {
+            //добавляем в коллекцию имена пока не встретим строку null
+            newArray.add(newNames[0][i]);
+            i++;
+        }
+        return newArray;
     }
 
     //метод получения кол-ва имен в экземпляре
@@ -137,9 +151,10 @@ public class BoyNameList {
                 BufferedReader br = new BufferedReader(new FileReader(path));
         ) {
             while ((line = br.readLine()) != null) {
+            //while ( i < 1000) {
                 temp = line.split("[ \t]");
                 //сохраняем имена temp[0] и частотности temp[1] в массиве BoyName
-                names[i] = new BoyName(temp[0],temp[1]);
+                //names[i] = new BoyName(temp[0],temp[1]);
                 //сохраняем имена temp[0] в каждом элементе нулевой строки 2D массива - элемент имен
                 newNames[0][i] = temp[0];
                 //сохраняем частотности temp[1] в каждом элементе первой строки 2D массива - элемент частотностей
