@@ -2,6 +2,7 @@ package com.lux.assignment;
 
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -54,7 +55,10 @@ public class BoyNamesDemo {
         System.out.println("");
 
         //выполним поиск в списке aBoys введенного имени из экземпляра newBoy
-        System.out.println(aBoys.searchBoyName(newBoy.getBoyName()));
+        //System.out.println(aBoys.searchBoyName(newBoy.getBoyName()));
+
+        //выполним поиск используя статический метод Arrays.binarySearch(Object[] a, Object key)
+        System.out.println("Index of newBoy.getBoyName() in aBoys.getNames() is: " + Arrays.binarySearch(aBoys.getNewNames(), newBoy.getBoyName()));
 
         //для отладки выведем индекс искомого имени в списке
         int index = aBoys.searchBoyName(newBoy.getBoyName());

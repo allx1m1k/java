@@ -31,6 +31,10 @@ public class BoyNameList {
     public BoyName[] getNames() {
         return names;
     }
+    //метод получения массива имен из 2D массива newNames
+    public String [] getNewNames() {
+        return this.newNames[0];
+    }
 
     //метод получения кол-ва имен в экземпляре
     public int getCnt() {
