@@ -32,7 +32,7 @@ public class BoyNamesDemo {
         return aName;
 
     }
-    public static void main(String[] args) throws BoyNameNotFoundException {
+    public static void main(String[] args) throws BoyNameNotFoundException, IOException {
         Object[]names = new Object[8];
         String line = null; //строка из файла
         BoyNameList aBoys; //список имен
@@ -70,5 +70,9 @@ public class BoyNamesDemo {
             //после поиска введенного имени снова запросим ввод имени
             newBoyName = BoyNamesDemo.inputBoyName();
         }
+        //КОНЕЦ ЦИКЛА WHILE
+        //запишем список имен в новый текстовый файл
+        System.out.println("Writing to file boyNewNames.txt...");
+        aBoys.writeNamesFrom2DArrayToFile("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\boyNewNames.txt");
     }
 }

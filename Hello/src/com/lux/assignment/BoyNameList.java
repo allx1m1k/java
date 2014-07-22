@@ -2,9 +2,7 @@ package com.lux.assignment;
 
 import com.lux.classes.Student;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -175,6 +173,33 @@ public class BoyNameList {
         } catch (IOException e) {
             e.getMessage();
         }
+    }
+
+    /**
+     * метод записи имен в новый файл
+     * @param path
+     * @throws FileNotFoundException
+     * @throws IOException
+     */
+    public void writeNamesFrom2DArrayToFile(String path) throws IOException {
+        int i = 0;
+        try (
+                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path), "utf-8"));
+        )   {
+            //String line;
+            while (this.newNames[0][i] != null) {
+                System.out.println(this.newNames[0][i]);
+                //запишем строку в выходной поток
+                System.out.println(this.newNames[0][i] + "  " + this.newNames[1][i]);
+                System.out.println();
+                bw.write(this.newNames[0][i] + " " + this.newNames[1][i] + "\r\n");
+
+                i++;
+            }
+        } catch (IOException e) {
+            e.getMessage();
+        }
+
     }
     /**
      * метод чтения имен и частотностей из файла
