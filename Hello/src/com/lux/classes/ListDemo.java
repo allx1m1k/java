@@ -1,10 +1,7 @@
 package com.lux.classes;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by dima on 7/21/2014.
@@ -68,5 +65,16 @@ public class ListDemo {
         System.out.println(s);
     }
     */
+
+    //анонимный Класс
+    LinkedHashMap<Integer, String> lru = new LinkedHashMap<Integer, String>(16, 0.75f, true) {
+
+        //фармашлепский проект - пишем код не задумываясь
+
+        @Override
+        protected boolean removeEldestEntry(Map.Entry<Integer, String> eldest) {
+            return size() > 100;
+        }
+    };
 
 }
