@@ -1,6 +1,6 @@
 package com.lux.classes;
 
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
+//import com.sun.xml.internal.ws.api.ha.StickyFeature;
 
 import java.math.BigDecimal;
 
@@ -11,8 +11,15 @@ public class Student {
     private Integer id; //зачетка
     private String firstN;
     private String lastN;
-    private BigDecimal rate;
+    private BigDecimal rate; //particular Student rating
 
+    /**
+     * Constructor
+     * @param id
+     * @param firstN
+     * @param lastN
+     * @param rate
+     */
     public Student(Integer id, String firstN, String lastN, BigDecimal rate) {
         this.id = id;
         this.firstN = firstN;
