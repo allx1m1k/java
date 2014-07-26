@@ -2,18 +2,17 @@ package com.lux.assignment;
 
 import java.util.AbstractList;
 
-/**
+/** Реализуем класс на основе праметризированного типа данных, который наследует AbstractList
  * Created by dima on 7/26/2014.
  */
-public class SortedArrayList extends AbstractList {
+public class SortedArrayList<T extends AbstractList > {
 
-        @Override
-        public Object get(int index) {
-            return null;
-        }
+    /**
+     * Constructor
+     * @param anArray в качестве аршумента конструктора передаеи тип T - путукшс, т.е. тип как пераметр
+     */
+    public SortedArrayList(T anArray) {
 
-        @Override
-        public int size() {
-            return 0;
-        }
+    }
+
 }
