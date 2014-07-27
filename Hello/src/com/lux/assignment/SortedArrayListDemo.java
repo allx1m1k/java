@@ -1,6 +1,5 @@
 package com.lux.assignment;
 
-import java.util.AbstractList;
 import java.util.LinkedList;
 
 /**
@@ -22,5 +21,14 @@ public class SortedArrayListDemo {
          */
 
         SortedArrayList<LinkedList> aList = new SortedArrayList<LinkedList>();
+        aList.add(new LinkedList());
+
+        SortedArrayList<LinkedList> anotherList = new SortedArrayList<LinkedList>();
+        anotherList.add(new LinkedList());
+
+        //создадим коллекцию-контрейнер объектов типа SortedArrayList
+        //List<SortedArrayList> newList = new ArrayList<>();
+        //newList.add("A");
+
     }
 }
