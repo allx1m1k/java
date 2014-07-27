@@ -1,6 +1,6 @@
 package com.lux.assignment;
 
-import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by dima on 7/26/2014.
@@ -20,11 +20,14 @@ public class SortedArrayListDemo {
         }
          */
 
-        SortedArrayList<LinkedList> aList = new SortedArrayList<LinkedList>();
-        aList.add(new LinkedList());
+        SortedArrayList<Number> aList = new SortedArrayList<Number>();
+        aList.add(new Integer(1));
+        aList.add(new Integer(2));
+        aList.add(new Integer(3));
+        aList.add(new Double(4));
 
-        SortedArrayList<LinkedList> anotherList = new SortedArrayList<LinkedList>();
-        anotherList.add(new LinkedList());
+        //aList.add(new LinkedList());
+
 
         //создадим коллекцию-контрейнер объектов типа SortedArrayList
         //List<SortedArrayList> newList = new ArrayList<>();
