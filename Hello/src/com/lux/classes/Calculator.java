@@ -6,7 +6,7 @@ import java.util.IllegalFormatCodePointException;
  * Created by dima on 7/31/2014.
  */
 public class Calculator {
-    private Service service; //наш Кальк использует сторонний сервис
+    private Service service; //наш Кальк использует сторонний сервис который инжектится ему через конструктор, см. ниже конструктор Calc
 
     public Calculator() {
     }
