@@ -1,5 +1,9 @@
 package com.lux.assignment;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 /**
  * Класс-реализация интерфейса Source
  * Моделирует в качестве источника текстовый файл
@@ -9,16 +13,40 @@ package com.lux.assignment;
  * Created by dima on 8/2/2014.
  */
 public class TextSourceImpl implements Source {
+    private String path;
 
     /**
      * Конструктор
      * @param pathToSource путь к файлу
      */
     public TextSourceImpl(String pathToSource) {
+        this.path = pathToSource;
     }
 
     @Override
     public void getText() {
-
+        String line = null; //строка из файла
+        String[] temp = new String[1000];
+        int i = 0;
+        try (
+                BufferedReader br = new BufferedReader(new FileReader(path));
+        ) {
+            while ((line = br.readLine()) != null) {
+                //while ( i < 1000) {
+                temp = line.split("[ \t]");
+                //сохраняем имена temp[0] и частотности temp[1] в массиве BoyName
+                //names[i] = new BoyName(temp[0],temp[1]);
+                //сохраняем имена temp[0] в каждом элементе нулевой строки 2D массива - элемент имен
+                System.out.printf("%s ", temp[0]);
+                //сохраняем частотности temp[1] в каждом элементе первой строки 2D массива - элемент частотностей
+                System.out.printf("%s ", temp[1] );
+                System.out.println();
+                //увеличиваем счетчик массива BoyName на 1 - двигаемся по ячейкам
+                i++;
+                //this.cnt ++;
+            }
+        } catch (IOException e) {
+            e.getMessage();
+        }
     }
 }

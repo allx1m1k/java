@@ -17,4 +17,20 @@ public class Analyzer {
     public Analyzer(Source source) {
         this.source = source;
     }
+
+    public Source getSource() {
+        return source;
+    }
+
+    public void setSource(Source source) {
+        this.source = source;
+    }
+
+    public Map<String, Integer> getData() {
+        return data;
+    }
+
+    public void setData(Map<String, Integer> data) {
+        this.data = data;
+    }
 }
