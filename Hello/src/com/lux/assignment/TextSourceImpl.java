@@ -1,8 +1,8 @@
 package com.lux.assignment;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 /**
  * Класс-реализация интерфейса Source
@@ -13,16 +13,46 @@ import java.io.IOException;
  * Created by dima on 8/2/2014.
  */
 public class TextSourceImpl implements Source {
-    private String path;
+    private String path; //входной файл
+    private byte[] is; //массив байтов текста из входного файла
 
     /**
      * Конструктор
+     *
      * @param pathToSource путь к файлу
      */
     public TextSourceImpl(String pathToSource) {
         this.path = pathToSource;
     }
 
+    //инкапсулируем доступ к массиву байтов is
+    @Override
+    public byte[] getIs(){
+        return this.is;
+    }
+    /**
+     * Метод заполнит массив байтов is для экземпляра класса TextSourceImpl
+     */
+    @Override
+    public void getText() {
+        try {
+            InputStream in = new BufferedInputStream(new FileInputStream (path));
+            try {
+                //инициализируем массив байтов
+                is = new byte[in.available()];
+                //заполним массив байтов из потока InputStream
+                in.read(is);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        //System.out.println(Arrays.toString(is));
+    }
+}
+
+/*
     @Override
     public void getText() {
         String line = null; //строка из файла
@@ -49,4 +79,5 @@ public class TextSourceImpl implements Source {
             e.getMessage();
         }
     }
-}
+*/
+

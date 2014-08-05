@@ -8,4 +8,6 @@ package com.lux.assignment;
 public interface Source {
 
     public void getText();
+
+    public byte[] getIs();
 }

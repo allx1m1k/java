@@ -8,16 +8,25 @@ import java.util.HashMap;
 public class AnalyzerDemo {
 
     public static void main(String[] args) {
-        String line = null; //строка из файла
+        String content; //контент из файла
         TextSourceImpl aText; //текст из txt
+        Analyzer analyzer;
         //aBoys = new BoyNameList(8);
         //aText = new TextSourceImpl("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\text.txt");
         //aBoys.readNamesFromFile("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\boynames.txt");
         //aBoys.readNamesFromFileTo2DArray("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\boynames.txt");
         //aText.getText();
 
-        Analyzer analyzer;
-        analyzer = new Analyzer(new TextSourceImpl("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\text.txt"));
-        analyzer.getSource().getText();
+        //создадим экземпляр TextSourceImpl
+        aText = new TextSourceImpl("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\text.txt");
+
+        //создадим экз-р Analyzer с исчтонком
+        analyzer = new Analyzer(aText);
+        //analyzer = new Analyzer(new TextSourceImpl("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\text.txt"));
+
+        //заполним массив
+        //analyzer.getSource().getText();
+        //парсинг
+        analyzer.parseSource();
     }
 }
