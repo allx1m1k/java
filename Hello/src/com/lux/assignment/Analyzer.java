@@ -54,10 +54,13 @@ public class Analyzer {
         //stringScan.useDelimiter(" ");
         stringScan = stringScan.useDelimiter("[^a-zA-Z]+");
         System.out.println("1");
+        int i = 0;
         //цикл
         while (stringScan.hasNext()) {
             String word = stringScan.next();
             System.out.println(word);
+            data.put(word, i);
+            i++;
         }
         return null;
     }
