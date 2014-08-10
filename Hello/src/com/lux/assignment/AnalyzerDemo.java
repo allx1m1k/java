@@ -18,8 +18,8 @@ public class AnalyzerDemo {
         //aText.getText();
 
         //создадим экземпляр TextSourceImpl
-        aText = new TextSourceImpl("D:\\eclipse\\text.txt");
-
+        //aText = new TextSourceImpl("D:\\eclipse\\text.txt");
+        aText = new TextSourceImpl("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\text.txt");
         //создадим экз-р Analyzer с исчтонком
         analyzer = new Analyzer(aText);
         //analyzer = new Analyzer(new TextSourceImpl("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\text.txt"));
