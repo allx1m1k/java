@@ -27,6 +27,7 @@ public class AnalyzerDemo {
         //заполним массив
         //analyzer.getSource().getText();
         //парсинг
-        analyzer.parseSource();
+        System.out.println(analyzer.parseSource().toString());
+        System.out.println(analyzer.getData().toString());
     }
 }

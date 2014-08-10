@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Analyzer {
 
     Source source; //иcточник текста
-    Map<String, Integer> data; //данные в виде слово-клю, частота слова в тексте
+    LinkedHashMap<String, Integer> data; //данные в виде слово-клю, частота слова в тексте
 
     //Конструкторы
     //инжектим объект источника в конструктор анализатора
@@ -43,7 +43,8 @@ public class Analyzer {
      */
     public LinkedHashMap<String, Integer> parseSource() {
         //заполним в source массив байтов is контентом из файла
-        source.getText();
+        String word;
+    	source.getText();
         //преобразуем контент из массива байтов в Строку
         //String aString = new String(source.getIs());
         //создадим Поток из преобразованной Строки чтобы отбросить разделители
@@ -52,28 +53,15 @@ public class Analyzer {
         //stringScan.useDelimiter("[^a-zA-Z]");
         //бьет по словам и словам с точкой
         //stringScan.useDelimiter(" ");
-        stringScan = stringScan.useDelimiter("[^a-zA-Z]+");        
-        //считаем с файла первое слово 
-        String word = stringScan.next();
-        System.out.println("1" + word);
-        if (data.get(word) != null) data.put(word, data.get(word)+1); 
-        else {	
-        	System.out.println("not found!");
-        	data.put(word, 1);
-        	System.out.println("added " + word + " " + data.get(word));
-        }
-        //int i = 0;
-        //цикл        
+        stringScan = stringScan.useDelimiter("[^a-zA-Z]+");    
+        //цикл 
         while (stringScan.hasNext()) {
             word = stringScan.next();
-            //System.out.println(word);
-            //если для данного ключевого слова word кол-во вхождений > 0, то изменить кол-во вхождений на +1
-            if (data.get(word) != null) {
-            //if (data.containsKey(word)) {            	
-            	data.put(word, data.get(word)+1);
-            	System.out.print(word + " 	" + data.get(word) + " 	");
-            } else data.put(word, 1);            
+            System.out.println(word);
+            //http://stackoverflow.com/questions/4363665/hashmap-implementation-to-count-the-occurences-of-each-character
+            int count = data.containsKey(word) ? data.get(word) : 0;
+            data.put(word, count +1);
         }
-        return null;
+        return data;
     }
 }
