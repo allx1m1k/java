@@ -52,15 +52,27 @@ public class Analyzer {
         //stringScan.useDelimiter("[^a-zA-Z]");
         //бьет по словам и словам с точкой
         //stringScan.useDelimiter(" ");
-        stringScan = stringScan.useDelimiter("[^a-zA-Z]+");
-        System.out.println("1");
-        int i = 0;
-        //цикл
+        stringScan = stringScan.useDelimiter("[^a-zA-Z]+");        
+        //считаем с файла первое слово 
+        String word = stringScan.next();
+        System.out.println("1" + word);
+        if (data.get(word) != null) data.put(word, data.get(word)+1); 
+        else {	
+        	System.out.println("not found!");
+        	data.put(word, 1);
+        	System.out.println("added " + word + " " + data.get(word));
+        }
+        //int i = 0;
+        //цикл        
         while (stringScan.hasNext()) {
-            String word = stringScan.next();
-            System.out.println(word);
-            data.put(word, i);
-            i++;
+            word = stringScan.next();
+            //System.out.println(word);
+            //если для данного ключевого слова word кол-во вхождений > 0, то изменить кол-во вхождений на +1
+            if (data.get(word) != null) {
+            //if (data.containsKey(word)) {            	
+            	data.put(word, data.get(word)+1);
+            	System.out.print(word + " 	" + data.get(word) + " 	");
+            } else data.put(word, 1);            
         }
         return null;
     }
