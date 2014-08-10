@@ -47,7 +47,7 @@ public class TextSourceImpl implements Source {
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        }
+        } 
         //System.out.println(Arrays.toString(is));
     }
 }
