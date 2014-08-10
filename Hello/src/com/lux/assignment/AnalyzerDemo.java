@@ -9,7 +9,7 @@ public class AnalyzerDemo {
 
     public static void main(String[] args) {
         String content; //контент из файла
-        TextSourceImpl aText; //текст из txt
+        Source aText; //текст из txt
         Analyzer analyzer;
         //aBoys = new BoyNameList(8);
         //aText = new TextSourceImpl("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\text.txt");
