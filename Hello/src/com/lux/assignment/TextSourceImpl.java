@@ -40,8 +40,10 @@ public class TextSourceImpl implements Source {
             try {
                 //инициализируем массив байтов
                 is = new byte[in.available()];
-                //заполним массив байтов из потока InputStream
+                //заполним массив байтов из потока InputStream сразу за один проход
                 in.read(is);
+                //закроем поток во избежание утечек памяти
+                in.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -49,6 +51,7 @@ public class TextSourceImpl implements Source {
             e.printStackTrace();
         } 
         //System.out.println(Arrays.toString(is));
+
     }
 }
 
