@@ -22,7 +22,9 @@ public class AnalyzerDemo {
         //создадим экземпляр TextSourceImpl
         //aText = new TextSourceImpl("D:\\eclipse\\text.txt");
         aText = new TextSourceImpl("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\text.txt");
-        aUrlText = new HtmlSourceImpl("https://home.luxoft.com/index.htm");
+        //aUrlText = new HtmlSourceImpl("https://home.luxoft.com/index.htm");
+        aUrlText = new HtmlSourceImplJsoup("https://home.luxoft.com/index.htm");
+
         //создадим экз-р Analyzer с исчтонком
         analyzer = new Analyzer(aText);
         analyzerUrl = new Analyzer(aUrlText);
@@ -31,7 +33,9 @@ public class AnalyzerDemo {
         //заполним массив
         //analyzer.getSource().getText();
         //парсинг
+        System.out.println("=== TEXT SOURCE ===");
         System.out.println(analyzer.parseSource().toString());
-        System.out.println(analyzerUrl.parseSource());
+        System.out.println("=== HTML SOURCE ===");
+        System.out.println(analyzerUrl.parseSource().toString());
     }
 }
