@@ -23,7 +23,7 @@ public class AnalyzerDemo {
         //aText = new TextSourceImpl("D:\\eclipse\\text.txt");
         aText = new TextSourceImpl("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\text.txt");
         //aUrlText = new HtmlSourceImpl("https://home.luxoft.com/index.htm");
-        aUrlText = new HtmlSourceImplJsoup("https://home.luxoft.com/index.htm");
+        aUrlText = new HtmlSourceImplJsoup("http://dumskaya.net");
 
         //создадим экз-р Analyzer с исчтонком
         analyzer = new Analyzer(aText);
