@@ -47,7 +47,7 @@ public class HtmlSourceImplJsoup implements Source {
         //установим значение ссылки
         plainText = aHtml.getPlainText(aElement);
         //заполним массив байтов is
-        //этот массив используется как хранилище данных в классе Analyzer
+        //этот массив используется как хранилище
         is = plainText.getBytes();
     }
     @Override
