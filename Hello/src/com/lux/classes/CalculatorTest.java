@@ -53,7 +53,7 @@ public class CalculatorTest {
         assertEquals(3, result, 0.1);
     }
 
-    @Ignore
+    //@Ignore
     @Test(expected = IllegalArgumentException.class)
     public void testDivide() throws Exception {
         calc.divide(5,0); //мы ожидаем что при таких аргументах у нас должно появится IllegalArumExcept
