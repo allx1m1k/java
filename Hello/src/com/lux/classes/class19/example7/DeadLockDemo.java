@@ -3,7 +3,9 @@ package com.lux.classes.class19.example7;
 public class DeadLockDemo {
 
 	public static void main(String[] args) {
-		Bank bank = new Bank();
+		//очередность блокировки не устанавливается - получается взаимная блокировка
+        Bank bank = new Bank();
+        //BankSafe bank = new BankSafe(); тут блокировки не будет, т.к. устанавливается очередность
 		
 		Account acc1 =  new Account(100, 1);
 		Account acc2 =  new Account(200, 2);
