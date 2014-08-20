@@ -21,7 +21,8 @@ public class Main {
 		try {
 			companyThread.join();
 			bankThread.join();
-			System.out.printf("Account : Final Balance: %f\n",account.getBalance());
+
+            System.out.printf("Account : Final Balance: %f\n",account.getBalance());
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
