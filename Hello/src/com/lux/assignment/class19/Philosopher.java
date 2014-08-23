@@ -38,6 +38,7 @@ public class Philosopher implements Runnable {
         lFork.setStatus(1);
         rFork.setStatus(1);
         System.out.println("Philosopher " + name + " is eating with left fork = " + this.leftFork.getNumber() + " and " + this.rightFork.getNumber());
+        Thread.sleep(500);
     }
 
     public void doThink() throws InterruptedException {
