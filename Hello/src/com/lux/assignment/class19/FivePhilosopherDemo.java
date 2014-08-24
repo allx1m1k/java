@@ -24,19 +24,19 @@ public class FivePhilosopherDemo {
         Thread p1Thread = new Thread(philosopher1, philosopher1.getName());
         philosopher1.setForks(forks);
         p1Thread.start();
-
+        //создадим философа
         Philosopher philosopher2 = new Philosopher("Pluton");
         Thread p2Thread = new Thread(philosopher2, philosopher2.getName());
         philosopher2.setForks(forks);
         p2Thread.start();
-
+/*
         try {
 
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
+*/
     }
 }
 /*

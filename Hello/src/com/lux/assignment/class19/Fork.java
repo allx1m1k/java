@@ -21,16 +21,16 @@ public class Fork {
      *
      */
     public synchronized void put() {
-        this.status = 1;
-        System.out.println("Fork N" + number +" in usage");
+        this.status = 0;
+        System.out.println("Release Fork N" + number +" on table");
     }
 
     /**
      *
      */
     public synchronized void get() {
-        this.status = 0;
-        System.out.println("Fork N" + number +" on table");
+        this.status = 1;
+        System.out.println("Taking Fork N" + number +" in usage");
     }
 
     /**

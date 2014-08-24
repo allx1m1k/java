@@ -31,14 +31,23 @@ public class Philosopher implements Runnable {
 
     }
 
+    /**
+     * Method force Philosopher to eat with two Forks
+     * @param lFork left Fork
+     * @param rFork right Fork
+     * @throws InterruptedException
+     */
     public void doEat(Fork lFork, Fork rFork) throws InterruptedException {
         this.leftFork = lFork;
         this.rightFork = rFork;
         this.status = 1;
+        //set status in usage
         lFork.setStatus(1);
         rFork.setStatus(1);
+        //print to console
         System.out.println("Philosopher " + name + " is eating with left fork = " + this.leftFork.getNumber() + " and " + this.rightFork.getNumber());
-        Thread.sleep(500);
+
+        //Thread.sleep(500);
     }
 
     public void doThink() throws InterruptedException {
@@ -81,5 +90,19 @@ public class Philosopher implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
     }
+
+/*
+        for (int  i = 0; i < 5; i++) {
+            //check free smallest Fork - left Fork
+            if (forks[i].getStatus() == 0) {
+                System.out.println("Fork N" + i + " is on table");
+                //take left Fork
+                forks[i].get();
+                this.leftFork = forks[i];
+            }
+        }
+*/
+
 }
