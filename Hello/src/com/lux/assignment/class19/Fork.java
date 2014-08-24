@@ -18,7 +18,8 @@ public class Fork {
     }
 
     /**
-     *
+     * Release the Fork
+     * Put it on table
      */
     public synchronized void put() {
         this.status = 0;
@@ -26,11 +27,18 @@ public class Fork {
     }
 
     /**
-     *
+     * Get the Fork
+     * Fork is in uasge
      */
     public synchronized void get() {
         this.status = 1;
         System.out.println("Taking Fork N" + number +" in usage");
+    }
+
+    public boolean isFree(){
+        if (this.status > 0) {
+            return false;
+        } else return true;
     }
 
     /**

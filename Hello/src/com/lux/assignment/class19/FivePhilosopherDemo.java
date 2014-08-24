@@ -1,12 +1,5 @@
 package com.lux.assignment.class19;
 
-import com.lux.classes.class19.example4.SafeTask;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 /**
  * Created by dima on 8/21/2014.
  */
@@ -20,15 +13,15 @@ public class FivePhilosopherDemo {
         }
 
         //создадим философа
-        Philosopher philosopher1 = new Philosopher("Socrat");
+        Philosopher philosopher0 = new Philosopher("Socrat", 0);
+        Thread p0Thread = new Thread(philosopher0, philosopher0.getName());
+        philosopher0.setForks(forks);
+        p0Thread.start();
+        //создадим философа
+        Philosopher philosopher1 = new Philosopher("Pluton", 1);
         Thread p1Thread = new Thread(philosopher1, philosopher1.getName());
         philosopher1.setForks(forks);
         p1Thread.start();
-        //создадим философа
-        Philosopher philosopher2 = new Philosopher("Pluton");
-        Thread p2Thread = new Thread(philosopher2, philosopher2.getName());
-        philosopher2.setForks(forks);
-        p2Thread.start();
 /*
         try {
 

@@ -6,6 +6,7 @@ package com.lux.assignment.class19;
 public class Philosopher implements Runnable {
 
     private String name;
+    private int number;
     // status = 0 is thinking
     // status = 1 is eating
     private int status;
@@ -21,8 +22,9 @@ public class Philosopher implements Runnable {
      * Номер философа
      * @param aName
      */
-    public Philosopher(String aName) {
+    public Philosopher(String aName, int aNumber) {
         this.name = aName;
+        this.number = aNumber;
         this.status = 0;
         System.out.println("Hi! I'm "+name);
         if (status == 0) {
@@ -70,11 +72,71 @@ public class Philosopher implements Runnable {
         return this.name;
     }
 
+    /**
+     * Get number of Philosopher
+     * @return
+     */
+    public int getNumber() {
+        return this.number;
+    }
+
+    /**
+     * Evaluate number of left Fork
+     * @return
+     */
+    public int checkLeftFork() {
+        if (this.number == 0) {
+            return 0;
+        } else return (this.number - 1);
+    }
+
+    /**
+     * Evaluate number of right Fork
+     * @return
+     */
+    public int checkRightFork() {
+        if (this.number == 0) {
+            return 4;
+        } else return this.number;
+    }
+
 
     @Override
     public void run() {
         System.out.println("Thread " + this.getName() + " starting...");
-        try {
+        //the initial Fork - is the left Fork
+        int i = checkLeftFork();
+        //loop
+        while (true) {
+            //get left Fork if free
+            if (forks[i].isFree()) {
+                forks[i].get();
+                //get right Fork if free
+                i = checkRightFork();
+                if (forks[i].isFree()) {
+                    forks[i].get();
+                    System.out.println("Philosopher N" + this.number + " " + this.name + " is eating!");
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                } else try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } else { //sleep if left Fork is un usage
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+        /** try {
             //if thinking try doEat
             if (this.status == 0) {
                 //fork is on table
@@ -89,9 +151,7 @@ public class Philosopher implements Runnable {
             Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
-
-    }
+        } /**
 
 /*
         for (int  i = 0; i < 5; i++) {
