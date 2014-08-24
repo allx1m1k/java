@@ -35,7 +35,7 @@ public class Fork {
         System.out.println("Taking Fork N" + number +" in usage");
     }
 
-    public boolean isFree(){
+    public synchronized boolean isFree(){
         if (this.status > 0) {
             return false;
         } else return true;

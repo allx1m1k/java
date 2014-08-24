@@ -84,7 +84,7 @@ public class Philosopher implements Runnable {
      * Evaluate number of left Fork
      * @return
      */
-    public int checkLeftFork() {
+    public synchronized int checkLeftFork() {
         if (this.number == 0) {
             return 0;
         } else return (this.number - 1);
@@ -94,7 +94,7 @@ public class Philosopher implements Runnable {
      * Evaluate number of right Fork
      * @return
      */
-    public int checkRightFork() {
+    public synchronized int checkRightFork() {
         if (this.number == 0) {
             return 4;
         } else return this.number;
@@ -111,22 +111,41 @@ public class Philosopher implements Runnable {
             //get left Fork if free
             if (forks[i].isFree()) {
                 forks[i].get();
-                //get right Fork if free
-                i = checkRightFork();
-                if (forks[i].isFree()) {
-                    forks[i].get();
-                    System.out.println("Philosopher N" + this.number + " " + this.name + " is eating!");
-                    try {
-                        Thread.sleep(2000);
+                synchronized (forks[i]) {
+                    //evaluate index of right Fork
+                    i = checkRightFork();
+                    //get right Fork if free
+                    if (forks[i].isFree()) {
+                        forks[i].get();
+                        //Eating!!! for 500ms
+                        System.out.println("Philosopher N" + this.number + " " + this.name + " is eating!");
+                        try {
+                            Thread.sleep(500);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        //evaluate index for left Fork
+                        i = checkLeftFork();
+                        //release left Fork
+                        forks[i].put();
+                        //evaluate index for left Fork
+                        i = checkRightFork();
+                        //release right Fork
+                        forks[i].put();
+                        //Thinking for 500ms
+                        System.out.println("Philosopher N" + this.number + " " + this.name + " is thinking!");
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    } else try { //otherwise sleep 1000ms if right Fork is in use
+                        Thread.sleep(500);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                } else try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
                 }
-            } else { //sleep if left Fork is un usage
+            }   else { //otherwise sleep if left Fork is un usage
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {

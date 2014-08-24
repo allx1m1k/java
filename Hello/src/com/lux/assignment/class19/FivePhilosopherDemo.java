@@ -16,20 +16,21 @@ public class FivePhilosopherDemo {
         Philosopher philosopher0 = new Philosopher("Socrat", 0);
         Thread p0Thread = new Thread(philosopher0, philosopher0.getName());
         philosopher0.setForks(forks);
-        p0Thread.start();
+
         //создадим философа
         Philosopher philosopher1 = new Philosopher("Pluton", 1);
         Thread p1Thread = new Thread(philosopher1, philosopher1.getName());
         philosopher1.setForks(forks);
-        p1Thread.start();
-/*
+
+        p0Thread.start();
         try {
 
-            Thread.sleep(5000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-*/
+        p1Thread.start();
+
     }
 }
 /*
