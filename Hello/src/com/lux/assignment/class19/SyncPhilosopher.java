@@ -19,6 +19,26 @@ public class SyncPhilosopher implements Runnable {
         System.out.println("Hi! I'm "+name);
     }
 
+    /**
+     * Evaluate number of left Fork
+     * @return
+     */
+    public synchronized int checkLeftFork() {
+        if (this.number == 0) {
+            return 0;
+        } else return (this.number - 1);
+    }
+
+    /**
+     * Evaluate number of right Fork
+     * @return
+     */
+    public synchronized int checkRightFork() {
+        if (this.number == 0) {
+            return 4;
+        } else return this.number;
+    }
+
     @Override
     public void run() {
 
