@@ -13,7 +13,7 @@ public class FivePhilosopherDemo {
         }
 
         //создадим философа
-        Philosopher philosopher0 = new Philosopher("Socrat", 0);
+        Philosopher philosopher0 = new Philosopher("Goraciy", 0);
         Thread p0Thread = new Thread(philosopher0, philosopher0.getName());
         philosopher0.setForks(forks);
 
