@@ -18,7 +18,7 @@ public class FivePhilosopherDemo {
         philosopher0.setForks(forks);
 
         //создадим философа
-        Philosopher philosopher1 = new Philosopher("Pluton", 1);
+        Philosopher philosopher1 = new Philosopher("Newton", 1);
         Thread p1Thread = new Thread(philosopher1, philosopher1.getName());
         philosopher1.setForks(forks);
 
