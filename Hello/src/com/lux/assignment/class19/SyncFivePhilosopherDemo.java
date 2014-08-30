@@ -5,4 +5,9 @@ package com.lux.assignment.class19;
  */
 public class SyncFivePhilosopherDemo {
 
+    public static void main(String[] args) {
+        System.out.println("Hello");
+    }
+
+
 }
