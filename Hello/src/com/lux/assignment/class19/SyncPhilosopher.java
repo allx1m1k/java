@@ -45,9 +45,28 @@ public class SyncPhilosopher implements Runnable {
         } else return this.number;
     }
 
+    private synchronized void think() {
+        System.out.println("Philosopher N" + this.number + " " + this.name + " is thinking!");
+        try {
+            Thread.currentThread().sleep(100);
+        } catch (InterruptedException e) {
+            //e.printStackTrace();
+            //this will safely interrupt the Thread
+            //see http://stackoverflow.com/questions/1087475/when-does-javas-thread-sleep-throw-interruptedexception
+        }
+        //notifyAll();
+    }
 
     public synchronized void eat(){
         System.out.println("Philosopher N" + this.number + " " + this.name + " is eating!");
+        try {
+            Thread.currentThread().sleep(100);
+        } catch (InterruptedException e) {
+            //e.printStackTrace();
+            //this will safely interrupt the Thread
+            //see http://stackoverflow.com/questions/1087475/when-does-javas-thread-sleep-throw-interruptedexception
+        }
+        notify();
         eatCount++;
     }
 
@@ -69,17 +88,10 @@ public class SyncPhilosopher implements Runnable {
                 synchronized (this.rightFork) {
                     System.out.println("Philosopher " + this.name + " takes right Fork N " + this.rightFork.getNumber());
                     eat();
-                    try {
-                        Thread.currentThread().sleep(1000);
-                    } catch (InterruptedException e) {
-                        //e.printStackTrace();
-                        //this will safely interrupt the Thread
-                        //see http://stackoverflow.com/questions/1087475/when-does-javas-thread-sleep-throw-interruptedexception
-                        Thread.currentThread().interrupt();
-                    }
                 }
             }
+            think();
+        Thread.currentThread().interrupt();
         }
-
     }
 }

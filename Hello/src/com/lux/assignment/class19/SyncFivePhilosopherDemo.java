@@ -54,6 +54,12 @@ public class SyncFivePhilosopherDemo {
         p3Thread.interrupt();
         p4Thread.interrupt();
 
+        try {
+            Thread.currentThread().sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         System.out.println(philosopher0.getName() + " has eaten " + philosopher0.getEatCount() + " times");
         System.out.println(philosopher1.getName() + " has eaten " + philosopher1.getEatCount() + " times");
         System.out.println(philosopher2.getName() + " has eaten " + philosopher2.getEatCount() + " times");
