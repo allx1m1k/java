@@ -48,6 +48,7 @@ public class SyncFivePhilosopherDemo {
             e.printStackTrace();
             //Thread.currentThread().interrupt();
         }
+
         p0Thread.interrupt();
         p1Thread.interrupt();
         p2Thread.interrupt();
