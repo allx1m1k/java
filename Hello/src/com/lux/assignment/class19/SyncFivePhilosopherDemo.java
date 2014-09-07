@@ -1,19 +1,49 @@
 package com.lux.assignment.class19;
 
+import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by dima on 27.08.2014.
  */
 public class SyncFivePhilosopherDemo {
 
-    public static void main(String[] args) {
-        System.out.println("Hello My Friend");
-
-        //arrays of Forks
+    public static void main(String[] args) throws InterruptedException {
+        String[] names;
+        Thread[] threads = new Thread[5];
+        SyncPhilosopher[] philosophers = new SyncPhilosopher[5];
         SyncFork[] forks = new SyncFork[5];
+
+        //populating arrays of Forks
         for (int i = 0; i< 5; i++) {
             forks[i] = new SyncFork(i);
         }
+        names = new String[] {"Dima","Petya", "Sasha", "Kolya", "Kazbek"};
+        //populating Array of philosopher
+        //populating Array of thread ans starting immediattly
+        for (int i = 0; i < 5; i++) {
+            philosophers[i] = new SyncPhilosopher(names[i], i, forks[i], (i < 5 - 1) ? forks[i+1] : forks[0]);
+            threads[i] = new Thread(philosophers[i]);
+            threads[i].start();
+        }
 
+        //let philosphers eat and think
+        TimeUnit.SECONDS.sleep(10);
+
+        SyncPhilosopher.stopRequested = true;
+
+        for (Thread thread : threads) {
+            thread.join();
+        }
+
+
+        System.out.println(philosophers[0].getName() + " has eaten " + philosophers[0].getEatCount() + " times");
+        System.out.println(philosophers[1].getName() + " has eaten " + philosophers[1].getEatCount() + " times");
+        System.out.println(philosophers[2].getName() + " has eaten " + philosophers[2].getEatCount() + " times");
+        System.out.println(philosophers[3].getName() + " has eaten " + philosophers[3].getEatCount() + " times");
+        System.out.println(philosophers[4].getName() + " has eaten " + philosophers[4].getEatCount() + " times");
+
+/*
         //create philosopher
         SyncPhilosopher philosopher0 = new SyncPhilosopher("Goraciy", 0, forks[0], forks[4]);
         Thread p0Thread = new Thread(philosopher0, philosopher0.getName());
@@ -49,22 +79,32 @@ public class SyncFivePhilosopherDemo {
             //Thread.currentThread().interrupt();
         }
 
+        //Thread.currentThread().interrupt();
+
         p0Thread.interrupt();
         p1Thread.interrupt();
         p2Thread.interrupt();
         p3Thread.interrupt();
         p4Thread.interrupt();
 
+
+
         try {
-            Thread.currentThread().sleep(5000);
+            Thread.currentThread().sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
+*/
+/*
         System.out.println(philosopher0.getName() + " has eaten " + philosopher0.getEatCount() + " times");
         System.out.println(philosopher1.getName() + " has eaten " + philosopher1.getEatCount() + " times");
         System.out.println(philosopher2.getName() + " has eaten " + philosopher2.getEatCount() + " times");
         System.out.println(philosopher3.getName() + " has eaten " + philosopher3.getEatCount() + " times");
         System.out.println(philosopher4.getName() + " has eaten " + philosopher4.getEatCount() + " times");
+*/
+        //System.out.println(Arrays.toString(philosophers));
+        //System.out.println(philosophers[0].toString());
+
     }
 }
