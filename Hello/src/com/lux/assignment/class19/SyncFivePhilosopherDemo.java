@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by dima on 27.08.2014.
  * What aHack 11.09.2014
+ * It's Ok 12.09.2014
  */
 public class SyncFivePhilosopherDemo {
 
