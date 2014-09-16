@@ -30,7 +30,8 @@ public class ThreadPoolAnalyzer {
 		//executor = (ThreadPoolExecutor) Executors.newCachedThreadPool();
 		results = new ArrayList<>();
 		
-		for (File file : (new File("/demo/textdata")).listFiles()) {
+		//for (File file : (new File("/demo/textdata")).listFiles()) {
+        for (File file : (new File("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\textdata")).listFiles()) {
 			loadFile(file);
 		}
 		

@@ -47,7 +47,7 @@ public class ThreadPoolAnalyzer4 {
 
 	private static void loadText() {
 		List<String> batch = new ArrayList<>();
-		for (File file : (new File("/demo/textdata")).listFiles()) {
+		for (File file : (new File("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\textdata")).listFiles()) {
 			try (BufferedReader reader = new BufferedReader(new FileReader(file)) ) {
 				String line = reader.readLine();
 				while (line != null) {
