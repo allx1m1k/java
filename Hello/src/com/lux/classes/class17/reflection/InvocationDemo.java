@@ -14,7 +14,8 @@ public class InvocationDemo {
 		list.add("test1");
 		list.add("test2");
 		list.add("test3");
-		System.out.println(System.nanoTime() - t1);
+		//Время в мс. понадобившееся на добавление в ArrayList 3 элементов типа String
+        System.out.println(System.nanoTime() - t1);
 		
 		long t2 = System.nanoTime();
 		Class<?> clazz = ArrayList.class;
@@ -37,7 +38,8 @@ public class InvocationDemo {
 		} catch (InvocationTargetException e) {
 			e.printStackTrace();
 		}
-		System.out.println(System.nanoTime() - t2);
+        //Время в мс. понадобившееся на создание экз-ра ArrayList и добавление 3 элементов типа String через reflection API
+        System.out.println(System.nanoTime() - t2);
 	}
 
 }
