@@ -1,4 +1,6 @@
-package com.lux.classes;
+package com.lux.classes.class19;
+
+import com.lux.classes.class19.CalculatorMultiThread;
 
 /**
  * Created by dima on 8/18/2014.
