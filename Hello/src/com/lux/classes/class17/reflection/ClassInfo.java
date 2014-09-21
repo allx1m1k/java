@@ -9,7 +9,7 @@ public class ClassInfo {
 	public static String getClassInfo(Class<?> clazz) {
 		StringBuilder info = new StringBuilder();
 		
-		info.append("class" + clazz.getSimpleName() + "\n");
+		info.append("class " + clazz.getSimpleName() + "\n");
 		loadConstructorsInfo(clazz, info);
 		loadFieldsInfo(clazz, info);
 		loadMethodsInfo(clazz, info);
