@@ -1,4 +1,4 @@
-package com.lux.classes;
+package com.lux.classes.class17;
 
 
 public class ProxyDemo {
