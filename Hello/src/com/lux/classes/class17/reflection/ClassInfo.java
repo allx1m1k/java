@@ -53,7 +53,9 @@ public class ClassInfo {
 
 	private static StringBuilder decodeModifiers(int mod) {
 		StringBuilder result = new StringBuilder("\t");
-		
+
+        //ниже пример использования тренарного оператора
+        // <условие>?”Aaaa” :”Bbbb”    //заменяет if () else
 		result.append(Modifier.isPublic(mod)?"public ":"");
 		result.append(Modifier.isPrivate(mod)?"private ":"");
 		result.append(Modifier.isProtected(mod)?"protected ":"");
