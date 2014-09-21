@@ -6,9 +6,13 @@ package com.lux.classes.class18;
  */
 
 class Super {
-    Super() {printThree();}
+    Super() {
+        printThree();
+    }
+
     void printThree(){
-        System.out.println("three");}
+        System.out.println("three");
+    }
 }
 
 public class TestJvm extends Super {
@@ -19,15 +23,17 @@ public class TestJvm extends Super {
     }
 
     public static void main(String[] args) {
-        while (true) {
+        //while (true) {
             TestJvm t = new TestJvm();
             t.printThree();
+            /*
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        }
+            */
+        //}
 
     }
 }
