@@ -1,4 +1,4 @@
-package com.lux.classes;
+package com.lux.classes.class15;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-/** Мы хотим отфильтровать коллекциюi
+/** Мы хотим отфильтровать коллекцию
  * В стандартном Java API метода который бы фильтровала коолл-ию - нет
  * в Guava есть такой метод - filter
  * Predicate - объект которое задает условие фильтрации
@@ -59,7 +59,7 @@ public class GuavaTest {
 
     /**
      * Внутренний класс enum
-     * Ни что не мешает созадть тело класса, методы, т.к. enum - это класса - получим rich enum
+     * Ни что не мешает созадть тело класса, методы, т.к. enum - это класс - получим rich enum
      * Но это не применятся
      * В 99% работает так
      */
