@@ -1,4 +1,4 @@
-package com.lux.assignment;
+package com.lux.assignment.class5;
 
 /**
 *КЉласс для работы с датой 

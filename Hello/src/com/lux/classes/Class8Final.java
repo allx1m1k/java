@@ -1,8 +1,6 @@
 package com.lux.classes;
 
-import com.lux.assignment.Date1;
-
-import java.util.Date;
+import com.lux.assignment.class5.Date1;
 
 /**
  * Created by dima on 02.07.2014.

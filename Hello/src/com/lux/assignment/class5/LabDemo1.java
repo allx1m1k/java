@@ -4,17 +4,14 @@
 *
 *
 */
-package com.lux.assignment;
-import com.lux.assignment.Date1;
-import java.io.*;
+package com.lux.assignment.class5;
 import java.lang.*;
-import java.util.Arrays;
 
 public class LabDemo1 {
 
 public static void main(String[] args) {
 	//создадим объект с помощью конструктора по-умолчанию
-	Date1 date1 = new com.lux.assignment.Date1();
+	Date1 date1 = new Date1();
 	Date1 date2 = new Date1(1, 6, 1976);
 	Date1 date3 = new Date1(date2);
 	Date1 date4 = new Date1(9,9,2013);

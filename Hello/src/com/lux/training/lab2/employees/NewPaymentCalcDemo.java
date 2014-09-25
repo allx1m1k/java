@@ -1,6 +1,6 @@
 package com.lux.training.lab2.employees;
 
-import com.lux.assignment.Date1;
+import com.lux.assignment.class5.Date1;
 import com.lux.training.utils.Date;
 
 /**
