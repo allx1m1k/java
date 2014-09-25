@@ -1,4 +1,6 @@
-package com.lux.classes;
+package com.lux.classes.class6;
+
+import com.lux.classes.Measurable;
 
 public class Rectangle1 extends Shape implements Measurable, Comparable {
 	//в rectangle1 появилис все члены Shape т.к. этот класс наследуется от Shape
