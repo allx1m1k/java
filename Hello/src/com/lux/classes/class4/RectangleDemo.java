@@ -1,4 +1,4 @@
-package com.lux.classes;
+package com.lux.classes.class4;
 
 public class RectangleDemo {
 
