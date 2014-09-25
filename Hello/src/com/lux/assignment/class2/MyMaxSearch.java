@@ -1,4 +1,4 @@
-package com.lux.assignment;
+package com.lux.assignment.class2;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -33,8 +33,8 @@ public class MyMaxSearch {
 				
 				
 		}
-		
-		System.out.print(max); //выводим max
+        System.out.println();
+        System.out.print("Max is " + max); //выводим max
 		
 		/*	System.out.print("The factorial of " + inputValue + " is " + factorial(inputValue));
 		else System.out.print("The input value is below zero");*/

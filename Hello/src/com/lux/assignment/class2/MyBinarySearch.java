@@ -6,7 +6,7 @@
  *порядка сортировки.
  *	
  */
-package com.lux.assignment;
+package com.lux.assignment.class2;
 
 import java.util.Arrays;
 
