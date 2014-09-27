@@ -1,8 +1,5 @@
 package com.lux.training.lab2.employees;
 
-import com.lux.classes.Playable;
-import com.lux.training.utils.Utils;
-
 /**
  * Created by dima on 10.06.2014.
  */
