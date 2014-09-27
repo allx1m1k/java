@@ -1,4 +1,4 @@
-package com.lux.classes;
+package com.lux.classes.class7;
 
 import java.util.Arrays;
 
@@ -32,7 +32,7 @@ public class OrchestraDemo {
         System.out.println("instrument1 color is " + instrument1.getColor());
         System.out.println("instrument2 color is " + instrument2.getColor());
         System.out.println("result of comparing colors is " + instrument1.compareTo(instrument2));
-        //[com.lux.classes.Violine@e5855a, com.lux.classes.Drum@95fd19, com.lux.classes.Drum@11b9fb1, com.lux.classes.Violine@913fe2, com.lux.classes.Singer@1f934ad, com.lux.classes.Singer@1f14ceb]
+        //[com.lux.classes.class7.Violine@e5855a, com.lux.classes.class7.Drum@95fd19, com.lux.classes.class7.Drum@11b9fb1, com.lux.classes.class7.Violine@913fe2, com.lux.classes.class7.Singer@1f934ad, com.lux.classes.class7.Singer@1f14ceb]
 
 
     }

@@ -1,4 +1,4 @@
-package com.lux.classes;
+package com.lux.classes.class7;
 
 /**
  * Created by dima on 6/5/2014.

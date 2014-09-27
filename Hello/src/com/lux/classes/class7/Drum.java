@@ -1,4 +1,4 @@
-package com.lux.classes;
+package com.lux.classes.class7;
 
 //import com.sun.org.apache.xpath.internal.SourceTree;
 
