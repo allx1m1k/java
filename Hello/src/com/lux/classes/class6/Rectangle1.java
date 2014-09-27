@@ -1,10 +1,8 @@
 package com.lux.classes.class6;
 
-import com.lux.classes.Measurable;
-
 public class Rectangle1 extends Shape implements Measurable, Comparable {
-	//в rectangle1 появилис все члены Shape т.к. этот класс наследуется от Shape
-	//
+	//в rectangle1 появились все члены Shape т.к. этот класс наследуется от Shape
+	//к примеру, появился атрибут color
 	//первой строчкой всегда идут вызовы конструктора
 	//super - обращение к методам или констуктору супер-класса 
 	//this - может быть только первой строчкой, т.е. либо super либо this в первой строке

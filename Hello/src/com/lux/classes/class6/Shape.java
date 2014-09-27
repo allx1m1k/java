@@ -10,12 +10,10 @@ public abstract class Shape {
 	//конструктор по умолчанию
     //у каждого экземпляра наследника от класса Shape будет инициализирован атрибут color и его значение будет red
     public Shape() {
-		
 		this.color = "red";
 	}
     //конструктор
 	public Shape(String color) {
-		
 		this.color = color;
 	}
 	
@@ -30,10 +28,10 @@ public abstract class Shape {
 
     //метод будет переодпределен в дочерних классах
     public abstract void draw();
-
+/*
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 	}
-
+*/
 }
