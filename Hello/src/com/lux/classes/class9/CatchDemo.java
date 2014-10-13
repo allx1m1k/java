@@ -1,4 +1,4 @@
-package com.lux.classes;
+package com.lux.classes.class9;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
