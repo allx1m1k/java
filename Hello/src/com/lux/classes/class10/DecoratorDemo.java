@@ -1,4 +1,4 @@
-package com.lux.classes;
+package com.lux.classes.class10;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
@@ -38,10 +38,12 @@ public class DecoratorDemo {
     public static void main(String[] args) {
 		
 		try (
-				InputStream is = new FileInputStream("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\String.html");
+				InputStream is = new FileInputStream("D:\\eclipse\\newworkspace\\java\\trunk\\Hello\\bin\\com\\lux\\classes\\String.html");
 				OutputStream ous = new ByteArrayOutputStream();
 			) {
-				//simpleCopy(is,ous);
+
+                //simpleCopy(is,ous);
+                //this is method with Decorator pattern
                 blockCopy(is, ous);
 				System.out.println(ous);
 			} catch (IOException e) {

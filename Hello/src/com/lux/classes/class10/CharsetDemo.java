@@ -1,4 +1,4 @@
-package com.lux.classes;
+package com.lux.classes.class10;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -14,8 +14,8 @@ public class CharsetDemo {
 	public static void main(String[] args) throws IOException {
 		try (
 				//BufferedReader br = new BufferedReader(new FileReader("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\hello_utf8.txt"));
-                BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\hello_cp866.txt"), "cp866"));
-                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\testcp.txt"), "utf-8"));
+                BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("D:\\eclipse\\newworkspace\\java\\trunk\\Hello\\bin\\com\\lux\\classes\\hello_cp866.txt"), "cp866"));
+                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("D:\\eclipse\\newworkspace\\java\\trunk\\Hello\\bin\\com\\lux\\classes\\testcp.txt"), "utf-8"));
 				) {
 			String line;
 			while ((line = br.readLine()) != null) {				

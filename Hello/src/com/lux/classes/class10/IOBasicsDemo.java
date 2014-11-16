@@ -1,4 +1,4 @@
-package com.lux.classes;
+package com.lux.classes.class10;
 
 import com.sun.corba.se.spi.orbutil.fsm.Input;
 
@@ -15,7 +15,10 @@ public class IOBasicsDemo {
 	
 	public static void main(String[] args) throws MalformedURLException, IOException {
 		//пример чтения из файла
-        InputStream is = new FileInputStream("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\test.txt");
+        //InputStream is = new FileInputStream("D:\\eclipse\\newworkspace\\Hello\\bin\\com\\lux\\classes\\test.txt");
+
+
+        InputStream is = new FileInputStream("D:\\eclipse\\newworkspace\\java\\trunk\\Hello\\bin\\com\\lux\\classes\\testcp.txt");
 		//InputStream is = new ByteArrayInputStream(new byte[] {104, 101, 108, 108, 111});
         //ПОЧЕМУ НЕ РАБОТАЕТ ОТКРЫТИЕ ПОТОКА???
 		//URL urlIs = new URL("http://oracle.com");

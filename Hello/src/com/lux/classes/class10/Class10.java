@@ -1,4 +1,4 @@
-package com.lux.classes;
+package com.lux.classes.class10;
 
 import com.sun.corba.se.spi.orbutil.fsm.Input;
 
@@ -13,7 +13,7 @@ import java.io.InputStream;
 public class Class10 {
 
     public static void main(String[] args) throws IOException {
-        InputStream is = new FileInputStream("D:\\PUB\\GoogleDrive\\JAVA\\test.txt");
+        InputStream is = new FileInputStream("D:\\WORK\\JAVA\\test.txt");
 
         int val =  is.read();
         while (val != -1) {
