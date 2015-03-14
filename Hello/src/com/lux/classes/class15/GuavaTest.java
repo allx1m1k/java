@@ -21,7 +21,7 @@ public class GuavaTest {
 
         System.out.println(Arrays.toString(list.toArray()));
         /**
-         * анонимный внутренний классс
+         * Ниже пример анонимного внутреннего классса
          * в java нельза передать функцию как параметр
          * через паттерн func object мы передаем объект анаонимного класса,
          * синтатксис
@@ -41,6 +41,9 @@ public class GuavaTest {
                 // не статическим атрибутам класса
                 //
                 //System.out.println(GuavaTest.this.test);
+                //
+                //Ниже пример работы фильтра: в результате в отфильтрованной коллекции
+                //остануться элементы длиной более 3 символов
                 //чтобы избежать NPE exception всегда проверяем ссыллку на null
                 return input != null && input.length()>3;
             }
@@ -50,7 +53,7 @@ public class GuavaTest {
         System.out.println(Arrays.toString(filteredList.toArray()));
 
         /**
-         * Статический внутренний класс может быть объвлен так, он еще называется вложенным
+         * Статический внутренний класс может быть объявлен так, он еще называется вложенным
          * private static class MyPredicate implements Predicate<String> {
          */
 
