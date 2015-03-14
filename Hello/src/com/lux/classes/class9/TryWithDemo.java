@@ -6,9 +6,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class TryWithDemo {
-	
-	
-/*
+
 	public static String getTextFromFile(String path) throws FileNotFoundException, IOException {
 
         try(
@@ -21,15 +19,19 @@ public class TryWithDemo {
 			ts.test();
 			return Arrays.toString(content);
 		}
-
-        return null;
+        //return null;
 	}
 
 	
 	public static void main(String[] args) {
-		System.out.println(getTextFromFile("e:/test.txt"));				
-	}
+        try {
+            System.out.println(getTextFromFile("e:/test.txt"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
-*/
+
+
 }
