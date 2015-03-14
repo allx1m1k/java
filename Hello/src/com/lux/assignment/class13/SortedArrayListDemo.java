@@ -1,6 +1,4 @@
-package com.lux.assignment;
-
-import java.util.List;
+package com.lux.assignment.class13;
 
 /**
  * Created by dima on 7/26/2014.
