@@ -1,4 +1,4 @@
-package com.lux.classes;
+package com.lux.classes.class14;
 
 import java.util.HashMap;
 import java.util.Map;
