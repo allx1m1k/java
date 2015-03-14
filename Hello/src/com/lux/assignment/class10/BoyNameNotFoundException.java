@@ -1,4 +1,4 @@
-package com.lux.assignment;
+package com.lux.assignment.class10;
 
 /**
  * Created by dima on 09.07.2014.

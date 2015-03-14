@@ -1,4 +1,4 @@
-package com.lux.assignment;
+package com.lux.assignment.class10;
 
 
 import java.io.IOException;

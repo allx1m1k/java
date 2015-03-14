@@ -1,6 +1,4 @@
-package com.lux.assignment;
-
-import com.lux.classes.Student;
+package com.lux.assignment.class10;
 
 import java.io.*;
 import java.util.ArrayList;
