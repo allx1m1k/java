@@ -12,18 +12,18 @@ public class Demo1 {
     public static void main(String[] args) {
 
         Rectangle rect1 = new Rectangle();
-        rect1.height = 2;
-        rect1.width = 5;
+        rect1.heightRectangle = 2;
+        rect1.widthRectangle = 5;
         System.out.println("Rectangle 1 area = " + rect1.getArea());
 
         Rectangle rect2 = new Rectangle();
-        rect2.height = 3;
-        rect2.width = 6;
+        rect2.heightRectangle = 3;
+        rect2.widthRectangle = 6;
 
         System.out.println("Rectangle 2 area = " + rect2.getArea());
 
         rect1 = rect2;
-        rect2.width = 100;
+        rect2.widthRectangle = 100;
 
         System.out.println("Rectangle 1 area = " + rect1.getArea());
         System.out.println("Rectangle 2 area = " + rect2.getArea());

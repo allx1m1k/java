@@ -1,5 +1,7 @@
 package com.lux.classes.class4.examples;
 
+import com.lux.classes.class10.examples.Point;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Dmitriy
@@ -8,14 +10,27 @@ package com.lux.classes.class4.examples;
  * To change this template use File | Settings | File Templates.
  */
 public class Rectangle {
-    int width;
-    int height;
+    Point pointRectangle;
+    int widthRectangle;
+    int heightRectangle;
+
+
+    public Rectangle(Point point, int width, int height) {
+        pointRectangle = point;
+        widthRectangle = width;
+        heightRectangle = height;
+
+    }
+
+    public Rectangle() {
+
+    }
 
     int getArea() {
-        return width*height;
+        return widthRectangle*heightRectangle;
     }
 
     void setHeight(int h) {
-        height = h;
+        heightRectangle = h;
     }
 }

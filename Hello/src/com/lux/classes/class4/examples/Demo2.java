@@ -12,19 +12,19 @@ public class Demo2 {
     public static void main(String[] args) {
 
         Rectangle rect1 = new Rectangle();
-        rect1.height = 2;
-        rect1.width = 5;
+        rect1.heightRectangle = 2;
+        rect1.widthRectangle = 5;
 
         changeHeight1(rect1);
-        System.out.println("Rectangle 1 height = " + rect1.height);
+        System.out.println("Rectangle 1 height = " + rect1.heightRectangle);
 
-        changeHeight2(rect1.height);
-        System.out.println("Rectangle 1 height = " + rect1.height);
+        changeHeight2(rect1.heightRectangle);
+        System.out.println("Rectangle 1 height = " + rect1.heightRectangle);
 
     }
 
     public static void changeHeight1(Rectangle r) {
-        r.height = 200;
+        r.heightRectangle = 200;
     }
 
     public static void changeHeight2(int height) {
