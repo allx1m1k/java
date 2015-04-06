@@ -5,12 +5,12 @@ package com.calc;
  */
 public class Addition extends Oper {
 
-    public Addition(int operandFirst, int operandSecond) {
-        super(operandFirst, operandSecond);
+    public Addition(int aFirstOperand, int aSecondOperand, Character aOperation) {
+        super(aFirstOperand, aSecondOperand, aOperation);
     }
 
     @Override
     public double compute() {
-        return 0;
+        return getVar1() + getVar2();
     }
 }

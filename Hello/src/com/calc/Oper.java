@@ -3,13 +3,15 @@ package com.calc;
 /**
  * Created by dima on 4/4/2015.
  */
-public abstract class Oper implements Operation {
+public abstract class Oper {
     private int var1;
     private int var2;
+    private Character operac;
 
-    public Oper (int operandFirst, int operandSecond) {
-        this.var1 = operandFirst;
-        this.var2 = operandSecond;
+    public Oper (int aFirstOperand, int aSecondOperand, Character aOperation) {
+        this.var1 = aFirstOperand;
+        this.var2 = aSecondOperand;
+        this.operac = aOperation;
     }
 
     public int getVar1() {
