@@ -9,6 +9,11 @@ public class Addition extends Oper {
         super(aFirstOperand, aSecondOperand, aOperation);
     }
 
+    public Addition(int aFirstOperand, int aSecondOperand) {
+        super(aFirstOperand, aSecondOperand);
+        super.setOperac('+');
+    }
+
     @Override
     public double compute() {
         return getVar1() + getVar2();
