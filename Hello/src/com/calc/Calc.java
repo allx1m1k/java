@@ -9,8 +9,6 @@ import java.util.List;
 public class Calc {
     //list of operations
     private List<Oper> opers = null;
-    //rezult of operations
-    private Number rezult = 0;
 
     public List<Oper> getOpers() {
         return opers;
@@ -20,28 +18,29 @@ public class Calc {
         this.opers = opers;
     }
 
-    public Number getRezult() {
-        return rezult;
-    }
-
-    public void setRezult(Number rezult) {
-        this.rezult = rezult;
-    }
-
-    public Number go() {
+    public double go() {
+        double totalRezult = 0.0;
         for (Oper item : opers){
-            rezult =+ item.compute();
+            //setRezult(getVar1() + getVar2());
+            item.setRezult(item.compute());
+            //item.; =+ item.compute();
+            totalRezult = totalRezult + item.getRezult();
         }
-        return getRezult();
+        return totalRezult;
     }
 
     public static void main(String[] args) {
         Calc c = new Calc();
         //initialize list of operations
         c.setOpers(new ArrayList<Oper>());
-        c.opers.add(new Addition(11331,1212));
+        //c.opers.add(new Addition(1,100));
+        //c.opers.add(new Addition(0,100));
+        c.opers.add(new Substraction(101,100));
         System.out.println("Quantity of Opers is " + c.getOpers().size());
         System.out.println(c.getOpers().toString());
-        System.out.println("\n" + "Result of opers is " + c.go() );
+        System.out.println("\n" + "Result of opers is " + c.go());
+        //c.go();
+        //System.out.println(c.getOpers().toArray());
+
     }
 }

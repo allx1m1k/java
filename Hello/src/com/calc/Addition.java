@@ -16,6 +16,7 @@ public class Addition extends Oper {
 
     @Override
     public double compute() {
-        return getVar1() + getVar2();
+        setRezult(getVar1() + getVar2());
+        return getRezult();
     }
 }
