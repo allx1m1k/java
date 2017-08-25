@@ -1,3 +1,5 @@
+package com.example.exercises;
+
 import java.io.*;
 import java.util.Comparator;
 import java.util.TreeSet;

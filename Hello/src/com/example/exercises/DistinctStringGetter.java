@@ -1,9 +1,11 @@
+package com.example.exercises;
+
 import java.io.*;
 import java.util.HashSet;
 
 /**
  * Created by IntelliJ IDEA.
- * User: alext
+ * User: allx1m1k
  * Date: 21.04.12
  * Time: 18:11
  * To change this template use File | Settings | File Templates.
