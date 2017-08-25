@@ -13,5 +13,9 @@ public class PrefixOperation {
         for (int i = 10; k <= i; --i) {
             System.out.println(i);
         }
+
+        System.out.println(k++ + " " + (k +=1) );
+        System.out.println("Total: " + 3 + 4);
+        System.out.println(3 + 4 + " Total: ");
     }
 }
