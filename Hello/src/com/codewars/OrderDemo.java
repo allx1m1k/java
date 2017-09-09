@@ -7,7 +7,7 @@ import java.util.Comparator;
  */
 public class OrderDemo {
     public static void main(String[] args) {
-        String s = Order.order("is2 123456 Thi1s T4est 1234567 3a 1 0");
+        String s = Order.order("");
         System.out.println(s);
     }
 
