@@ -1,0 +1,33 @@
+package com.codewars;
+
+/**
+ * Your task is to sort a given string. Each word in the String will contain a single number.
+ * This number is the position the word should have in the result.
+ * Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+ * If the input String is empty, return an empty String.
+ * The words in the input String will only contain valid consecutive numbers.
+ * For an input: "is2 Thi1s T4est 3a" the function should return "Thi1s is2 3a T4est"
+ */
+public class Order {
+
+    //static String words = new String("");
+    public static String order(String words) {
+        //initialize result with capacity of words length
+        StringBuilder result = new StringBuilder(words.length());
+        String[] parts = words.split(" ");
+
+        // if formal argument is empty
+        if (words.isEmpty())
+            return result.toString();
+        // proceed further if words is not empty
+        // chars comprises of words
+        //char [] chars = new char[words.length()];
+        //chars = words.toCharArray();
+
+        for (int i = 0; i < parts.length; i++) {
+            //System.out.println(chars[i]);
+            result.append(parts[i]).append(" ");
+        }
+        return result.toString();
+    }
+}
