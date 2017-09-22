@@ -10,6 +10,9 @@ package com.codewars;
 public class DescendingOrderDemo {
     public static void main(String[] args) {
         System.out.println(DescendingOrder.sortDesc(6540789));
+        System.out.println(DescendingOrder.sortDesc(1560789));
+        System.out.println(DescendingOrder.sortDesc(102345789));
+        System.out.println(DescendingOrder.sortDesc(135));
 
     }
 
