@@ -13,6 +13,7 @@ public class DescendingOrderDemo {
         System.out.println(DescendingOrder.sortDesc(1560789));
         System.out.println(DescendingOrder.sortDesc(102345789));
         System.out.println(DescendingOrder.sortDesc(135));
+        System.out.println(DescendingOrder.sortDesc(987210));
 
     }
 
