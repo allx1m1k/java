@@ -2,7 +2,7 @@ package com.lux.classes.class4;
 
 public class Rectangle {
 
-		//Поля класса
+		//РџРѕР»СЏ РєР»Р°СЃСЃР°
 		private int height;
 		private int width;
 		//
@@ -12,23 +12,23 @@ public class Rectangle {
 			testConstant = "mmm";
 		}
 		
-		//конструктор без параметров
+		//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
 		public Rectangle() {
 			
 		}
-		//конструктор с параметрами
+		//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 		public Rectangle(int height, int width) {
 			this.height = height;
 			this.width = width;
 		}
-	//Копирующий конструктор
+	//РљРѕРїРёСЂСѓСЋС‰РёР№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 		public Rectangle(Rectangle rectangle) {
 			this.height = rectangle.height;
 			this.width = rectangle.width;
 		}
 		
 		
-		//Методы класса
+		//РњРµС‚РѕРґС‹ РєР»Р°СЃСЃР°
 		int getArea() {
 			return height * width;
 		    }
@@ -50,13 +50,12 @@ public class Rectangle {
 	
 	public void setHeight(int height) {
 		
-		// height = height; перекрытие области видимости тут height - это локальная переменная с тем же именем
+		// height = height; РїРµСЂРµРєСЂС‹С‚РёРµ РѕР±Р»Р°СЃС‚Рё РІРёРґРёРјРѕСЃС‚Рё С‚СѓС‚ height - СЌС‚Рѕ Р»РѕРєР°Р»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ СЃ С‚РµРј Р¶Рµ РёРјРµРЅРµРј
 		this.height = height; //
 	}
 	
 	
-	//статический метод
-	
+	//СЃС‚Р°С‚РёС‡РµСЃРєРёР№ РјРµС‚РѕРґ
 	public static int sumArea(Rectangle r1, Rectangle r2) {
 		return r1.getArea() + r2.getArea(); 
 	}
