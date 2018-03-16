@@ -6,7 +6,7 @@ public class Class2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arrayOfIntegers; //объявление переменной без указания количества
+		int[] arrayOfIntegers; //объявление  переменной без указания количества
 
 		arrayOfIntegers = new int[7]; //создание, выделение памяти создание все эелементы нулевые изменить размер нельзя
 		//изменять размеры массива можно только в коллекциях - динамические массывы
