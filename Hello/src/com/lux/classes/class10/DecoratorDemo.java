@@ -38,7 +38,7 @@ public class DecoratorDemo {
     public static void main(String[] args) {
 		
 		try (
-				InputStream is = new FileInputStream("D:\\eclipse\\newworkspace\\java\\trunk\\Hello\\bin\\com\\lux\\classes\\String.html");
+				InputStream is = new FileInputStream("./String.html");
 				OutputStream ous = new ByteArrayOutputStream();
 			) {
 
