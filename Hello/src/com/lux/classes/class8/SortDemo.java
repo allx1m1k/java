@@ -64,19 +64,22 @@ public class SortDemo {
 		long timeEnd = System.nanoTime();
 
 
-		System.out.printf("Время затраченное методом пузырьковой сортировки: %,d \n", timeEnd-timeStart);
+		System.out.printf("Р’СЂРµРјСЏ Р·Р°С‚СЂР°С‡РµРЅРЅРѕРµ РјРµС‚РѕРґРѕРј РїСѓР·С‹СЂСЊРєРѕРІРѕР№ СЃРѕСЂС‚РёСЂРѕРІРєРё: %,d \n", timeEnd-timeStart);
 
 		array = Arrays.copyOf(array0, length);
 		timeStart = System.nanoTime();
 		quickSort(array);
 		timeEnd = System.nanoTime();
-        System.out.printf("Время затраченное методом быстрой сортировки: %,d \n", timeEnd-timeStart);
+        System.out.printf("Р’СЂРµРјСЏ Р·Р°С‚СЂР°С‡РµРЅРЅРѕРµ РјРµС‚РѕРґРѕРј Р±С‹СЃС‚СЂРѕР№ СЃРѕСЂС‚РёСЂРѕРІРєРё: %,d \n", timeEnd-timeStart);
 
 		array = Arrays.copyOf(array0, length);
 		timeStart = System.nanoTime();
 		Arrays.sort(array);
 		timeEnd = System.nanoTime();
-        System.out.printf("Время затраченное методом быстрой сортировки (стандартный): %,d \n", timeEnd-timeStart);
+        System.out.printf("Р’СЂРµРјСЏ Р·Р°С‚СЂР°С‡РµРЅРЅРѕРµ РјРµС‚РѕРґРѕРј Р±С‹СЃС‚СЂРѕР№ СЃРѕСЂС‚РёСЂРѕРІРєРё (СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№): %,d \n", timeEnd-timeStart);
+
+        System.out.println(Arrays.toString(array));
+
 
 		//System.out.println(Arrays.toString(array));   
 	}
