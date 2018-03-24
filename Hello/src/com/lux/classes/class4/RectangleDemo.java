@@ -1,11 +1,15 @@
 package com.lux.classes.class4;
 
+import java.util.*;
+
 public class RectangleDemo {
 
 
 	public static void changeHeight(Rectangle i) {
 		i.setHeight(200);
 	}
+
+	Rectangle rec4 = null; //обьявим и проинициализируем переменную
 /**
  * основная точка входа
  * @param args
@@ -75,8 +79,41 @@ public class RectangleDemo {
 	    System.out.println(rect1.getArea()); //20000
         System.out.println(rect2.getArea()); //20000
 
-	//rect1.setHeight(35);
-	
-	}
+	    //Работа с копирующим конструктором
+
+        //использование копирующего конструктора при создании объекта
+        //будет безопасно, т.к. переменная, хранящая ссылку на объект
+        //будет хранить ссылку на абсолютно новый объект, а не на тот,
+        //который передан в качестве формального аргумента
+        rect3 = new Rectangle(rect2); //в переменную запишем ссылку на новый об.
+        rect3.setWidth(20); //изменим ширину нового R
+        changeHeight(rect3); //изменим высоту
+
+        //создадим массив прямоугольников
+        Rectangle[] arrayOfRecs= {rect1, rect2, rect3} ;
+
+        //вывод в консоль из массива прямоугольиков
+        for (Rectangle r: arrayOfRecs) {
+            System.out.println("Площадь прямоугольника " + r + " " + r.getArea());
+        }
+        //работа с классом Arrays
+        Arrays.sort(arrayOfRecs, new Comparator<Rectangle>() {
+            @Override
+            public int compare(Rectangle o1, Rectangle o2) {
+                return 0;
+            }
+        });
+
+
+/**
+        System.out.println(rect3.getArea()); //4000
+        System.out.println(rect1.getArea()); //20000
+        System.out.println(rect2.getArea()); //20000
+*/
+
+
+        //List<ArrayList> listOfRectangles = new ArrayList<>();
+
+    }
 
 }
