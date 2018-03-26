@@ -78,6 +78,8 @@ public class RectangleDemo {
 	    System.out.println("Площади одинаковы, т.к. обе переменные ссылаются на один R"); //
 	    System.out.println(rect1.getArea()); //20000
         System.out.println(rect2.getArea()); //20000
+        System.out.println(rect1 == rect2); //true, т.к. переменные ссылочного типа ссылаются на один и тот же адрес
+        System.out.println(rect1.equals(rect2)); //true
 
 	    //Работа с копирующим конструктором
 
@@ -86,6 +88,8 @@ public class RectangleDemo {
         //будет хранить ссылку на абсолютно новый объект, а не на тот,
         //который передан в качестве формального аргумента
         rect3 = new Rectangle(rect2); //в переменную запишем ссылку на новый об.
+        System.out.println(rect3 == rect2); //false, т.к. созданная копия объекта R имеет другой адрес - оператор new!
+        System.out.println(rect3 == rect2); //false
         rect3.setWidth(20); //изменим ширину нового R
         changeHeight(rect3); //изменим высоту
 
